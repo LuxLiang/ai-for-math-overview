@@ -7,7 +7,7 @@
 
 理解 AI4Math 的能力边界、关键基础设施与开放问题，重点关注数学证明中的知识依赖和贡献归因：一个结果解决了什么问题，证明继承了什么，以及真正新增的数学内容在哪里。
 
-[任务覆盖](docs/task-coverage.md) · [能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [贡献归因](docs/contribution-attribution.md) · [研究缺口](docs/research-gaps.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
+[相关工作](docs/related-work.md) · [任务覆盖](docs/task-coverage.md) · [能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [贡献归因](docs/contribution-attribution.md) · [研究缺口](docs/research-gaps.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
 
 ## Task coverage: Mathematical Contribution Attribution
 
@@ -15,16 +15,14 @@
 
 | 目标 | 现有工作做到哪里 | 相对本研究目标的缺口 |
 | --- | --- | --- |
-| 拆解主证明 | OSVerify 可以分段并围绕局部论证提出疑点 | 文本分段还需转为数学主张与推导依赖，且覆盖整条主证明 |
-| 识别已知结果和技巧 | math-lineage 给出具体内容与前作的双侧位置、关系及引用状态 | 从选中的对应发现扩展到包括已充分引用内容在内的完整分析 |
-| 检查 3 → 4 这样的跳跃 | OSVerify 可检查局部论证是否存在实质问题；math-lineage 可提供前作线索 | 联合判断它属于既有结果、routine、实质改造、新连接还是未完成义务 |
-| 判断 routine | 标准库、自动 tactic 和形式化依赖提供可检查的局部信号 | 明确领域先验与粒度，验证这些信号是否符合专家的数学判断 |
-| 区分结果与证明的新颖性 | math-lineage 区分结果/技巧关系；PriorProof 提供受限的证明路线信号 | 对新结果、新证明、新场景、反例分别建立证据和评测 |
-| 解释整体贡献 | math-lineage 提供局部重要性标签 | 说明哪些连接支撑主定理，避免按未匹配步骤比例推断原创性 |
+| 表示证明结构 | Lean Blueprint 可组织作者标注的依赖；TheoremGraph 已抽取候选陈述依赖 | 核对结构的正确性、完整性和适合贡献判断的粒度 |
+| 找到既有结果 | NaturalProofs 有前提检索任务；TheoremSearch、Matlas 提供陈述级检索 | 验证候选结果的假设与结论是否真正覆盖当前步骤 |
+| 恢复文献来源 | TheoremGraph 附录 G 已做引用恢复实验；math-lineage 输出内容对应 | 从已有引用找回扩展到未引用技巧、间接来源和整条主证明 |
+| 检查关键跳跃 | OSVerify 可检查疑点，现有检索和依赖图能提供线索 | 区分沿用、routine、实质改造、新连接和未完成义务 |
+| 判断证明非平凡性 | PriorProof、Proof Perplexity 已研究相对库的路线和步骤信号 | 验证信号是否对应专家认可的数学增量 |
+| 区分新颖性与过程贡献 | AViD Journal 已尝试新颖性管线；Aletheia 讨论结果与人工参与分类 | 分别评估结果、证明、场景与反例，保留来源和未决项 |
 
-依据：[OSVerify §3](https://arxiv.org/html/2610.18089v1#S3)、[math-lineage](https://github.com/jnshi/math-lineage)、[PriorProof](https://arxiv.org/abs/2607.16997)。接口核对、适用范围和下一阶段交付物见[任务覆盖分析](docs/task-coverage.md)。
-
-**本仓库进度**：已完成代表性工作整理、接口层面对照和研究问题定义；尚未完成真实论文的完整贡献分析、系统复现或专家评测。下一阶段需要用实际案例检验上述缺口，而非仅增加资源条目。
+研究定位需要建立在这些已有能力之上。方法、评测边界与筛选依据见[相关工作分析](docs/related-work.md)；具体任务对照见[任务覆盖](docs/task-coverage.md)。
 
 ## Infrastructure map
 
@@ -33,6 +31,7 @@
 | 文献获取与标识 | [arXiv](https://info.arxiv.org/help/api/index.html)、[Crossref](https://www.crossref.org/documentation/retrieve-metadata/rest-api/)、[OpenAlex](https://help.openalex.org/) | 找到候选前作，固定文献版本与时间关系 |
 | 文档结构化 | [GROBID](https://github.com/grobidOrg/grobid)、[MinerU](https://github.com/opendatalab/MinerU) | 提取正文、公式、定理编号与参考文献，保留原文位置 |
 | 数学知识与证明接口 | [Mathlib](https://github.com/leanprover-community/mathlib4)、[LeanDojo](https://github.com/lean-dojo/LeanDojo)、[Pantograph](https://github.com/stanford-centaur/PyPantograph) | 检索和验证形式化数学中的局部依赖 |
+| 陈述检索与候选依赖 | [TheoremSearch / TheoremGraph](https://www.theoremsearch.com/)、[Matlas](https://matlas.ai/)、[Lean Blueprint](https://github.com/PatrickMassot/leanblueprint) | 提供陈述检索、候选图或作者标注的结构；其证据强度需要区分 |
 | 审阅与内容对应 | [OSVerify](https://github.com/OSVerify/OSVerify)、[math-lineage](https://github.com/jnshi/math-lineage) | 检查局部疑点，积累当前证明与先前工作的对应证据 |
 | 评测基准与研究材料 | [miniF2F](https://github.com/facebookresearch/miniF2F)、[PutnamBench](https://github.com/trishullab/PutnamBench)、[SorryDB](https://github.com/SorryDB/SorryDB)、[OpenAI Math](https://github.com/openai/math) | 分别提供竞赛证明、真实项目任务与研究手稿；用途不混用 |
 
@@ -54,7 +53,7 @@
 
 ## Research direction
 
-在本索引覆盖的代表性系统中，证明生成、错误检查和文献检索已经各自形成工具链。下一步值得检验的是：能否将它们组织成**可复核的证明依赖与贡献证据**。
+在本索引覆盖的代表性系统中，证明生成、文献检索、候选依赖和局部审阅已经有可复用工作。下一步值得检验的是：能否将它们组织成**可复核的证明依赖与贡献证据**。
 
 ```mermaid
 flowchart LR
@@ -65,12 +64,7 @@ flowchart LR
     E --> F[专家复核]
 ```
 
-这是拟研究的工作流。优先问题包括：证明步骤的稳定划分、跨论文符号与假设对齐、routine 判断，以及在有限审阅成本下识别真正需要专家判断的连接。[研究缺口与评测设计 →](docs/research-gaps.md)
-
-## Contributors
-
-- [LuxLiang](https://github.com/LuxLiang) — 项目发起与维护、研究方向和收录标准。
-- **Codex (OpenAI)** — AI 协作贡献者，参与文献整理、研究文档撰写与仓库工具维护。
+这是拟研究的工作流。优先问题包括：关键依赖的核对、跨论文符号与假设对齐、routine 与新连接的区分，以及在有限审阅成本下识别真正需要专家判断的连接。[研究缺口与评测设计 →](docs/research-gaps.md)
 
 ## Scope
 

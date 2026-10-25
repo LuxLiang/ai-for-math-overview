@@ -271,9 +271,9 @@
     "kind": "paper",
     "url": "https://arxiv.org/abs/2607.16997",
     "repository": null,
-    "note_zh": "以历史形式化依赖足迹构造证明路线信号；限定构念与专家判断的关系。",
+    "note_zh": "形式化路线非典型性信号；作者明确其不构成原创性检测，并讨论连接级新颖性盲点。",
     "checked_on": "2026-10-25",
-    "reading_scope": "abstract-only"
+    "reading_scope": "full-text-sections-6-and-7"
   },
   {
     "id": "2608.14669",
@@ -283,8 +283,116 @@
     "kind": "paper",
     "url": "https://arxiv.org/abs/2608.14669",
     "repository": null,
-    "note_zh": "探索新颖性检查并讨论陈述忠实性、检索覆盖和复现障碍；初步研究。",
+    "note_zh": "已有新颖性判定管线及有限实验；需关注未触发分支、自匹配与陈述忠实性。",
     "checked_on": "2026-10-25",
-    "reading_scope": "abstract-only"
+    "reading_scope": "full-text-sections-4-to-6"
+  },
+  {
+    "id": "2104.01112",
+    "title": "NaturalProofs: Mathematical Theorem Proving in Natural Language",
+    "date": "2021-03-24",
+    "category": "evaluation",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2104.01112",
+    "repository": "wellecks/naturalproofs",
+    "note_zh": "参考结果检索和生成的基础任务；可检验前提找回能力。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-upstream-task-specification"
+  },
+  {
+    "id": "2602.05216",
+    "title": "Semantic Search over 9 Million Mathematical Theorems",
+    "date": "2026-02-05",
+    "category": "literature",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2602.05216",
+    "repository": "uw-math-ai/TheoremSearch",
+    "note_zh": "陈述级语义检索，服务于定位候选前作，而非自动新颖性裁决。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-upstream-task-specification"
+  },
+  {
+    "id": "2606.25363",
+    "title": "TheoremGraph: Bridging Formal and Informal Mathematics",
+    "date": "2026-06-24",
+    "category": "literature",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2606.25363",
+    "repository": "uw-math-ai/TheoremSearch",
+    "note_zh": "重点读 §3–5 和附录 G：候选依赖、跨形式匹配及引用恢复实验。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-methods-and-appendix-g"
+  },
+  {
+    "id": "2604.17484",
+    "title": "Matlas: A Semantic Search Engine for Mathematics",
+    "date": "2026-04-19",
+    "category": "literature",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2604.17484",
+    "repository": null,
+    "note_zh": "重点读 §3：依赖抽取与展开，为历史论文、教材中的结果提供检索入口。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-section-3"
+  },
+  {
+    "id": "2602.10177",
+    "title": "Towards Autonomous Mathematics Research",
+    "date": "2026-02-10",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2602.10177",
+    "repository": null,
+    "note_zh": "重点读 §3.3 与 §5：区分文献识别、重新发现、新结果及人工贡献。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-sections-3-3-and-5"
+  },
+  {
+    "id": "2505.15585",
+    "title": "MIRB: Mathematical Information Retrieval Benchmark",
+    "date": "2025-05-21",
+    "category": "evaluation",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2505.15585",
+    "repository": null,
+    "note_zh": "按陈述、答案、前提与公式分别评价检索；不能用相关性分数替代新颖性。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-task-definitions-and-limitations"
+  },
+  {
+    "id": "2412.15184",
+    "title": "Data for Mathematical Copilots: Better Ways of Presenting Proofs for Machine Learning",
+    "date": "2024-12-19",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2412.15184",
+    "repository": null,
+    "note_zh": "从数学工作流与非平凡重复讨论证明数据设计，为局部任务与标签提供方法背景。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-selected-workflow-and-data-sections"
+  },
+  {
+    "id": "2602.05192",
+    "title": "First Proof",
+    "date": "2026-02-05",
+    "category": "evaluation",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2602.05192",
+    "repository": null,
+    "note_zh": "研究级证明的专家评价与学术规范；不是自动贡献归因基准。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "abstract-and-official-project-description"
+  },
+  {
+    "id": "2610.22612",
+    "title": "Proof Perplexity: A Probabilistic Approach to Measuring non-triviality in Machine Generated Proofs",
+    "date": "2026-10-15",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2610.22612",
+    "repository": null,
+    "note_zh": "直接研究步骤可恢复性与非平凡性；探索性度量，需审查分布假设、代理变量与外部验证。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-method-and-limitations"
   }
 ]

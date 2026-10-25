@@ -22,3 +22,5 @@ python3 scripts/build.py --check
 脚本只生成项目索引、阅读索引和 `references.bib`；不会覆盖 README 和研究分析。检查包括元数据唯一性、关联项目、生成文件一致性及本地文档链接。
 
 `references.bib` 是检索入口。正式引用请采用上游完整作者、版本、会议或期刊信息。
+
+项目贡献说明见 [Contributors](CONTRIBUTORS.md)。

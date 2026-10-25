@@ -76,13 +76,15 @@ def render(repos, readings):
         resources += '\n'
     doc = '''# Selected Readings
 
-[Overview](../README.md) · [Contribution attribution](contribution-attribution.md) · [Research gaps](research-gaps.md)
+[Overview](../README.md) · [Related work](related-work.md) · [Contribution attribution](contribution-attribution.md) · [Research gaps](research-gaps.md)
 
 ## Research focus
 
+- **检索与结构**：NaturalProofs、TheoremSearch / TheoremGraph、Matlas 和 Lean Blueprint，区分候选依赖、引用恢复和数学贡献判断。
 - **局部验证**：[OSVerify §3](https://arxiv.org/html/2610.18089v1#S3)，理解分解、提议和验证的任务边界。
 - **文献对应**：[math-lineage](https://github.com/jnshi/math-lineage)，查看证据位置、关系分类与实际报告。
-- **新颖性信号**：PriorProof 与 Beyond Correctness，比较形式化依赖、检索与专家判断。
+- **新颖性近邻**：PriorProof、Beyond Correctness 与 Proof Perplexity，比较路线信号、判定管线、步骤非平凡性和实际评测。
+- **研究过程**：Aletheia、First Proof 与 Data for Mathematical Copilots，核对人工贡献、研究工作流与评价目标。
 - **宏观归因**：Who Solved It?，仅依据公开摘要讨论聚合与文献依赖问题。
 
 下列论文按技术路线组织。arXiv 日期为首次提交日期；原始实验条件与结果应以论文为准。新颖性相关预印本用于近邻工作比较，其成熟度与基础设施项目分开评估。

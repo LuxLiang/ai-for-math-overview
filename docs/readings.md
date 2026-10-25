@@ -1,15 +1,25 @@
 # Selected Readings
 
-[Overview](../README.md) · [Contribution attribution](contribution-attribution.md) · [Research gaps](research-gaps.md)
+[Overview](../README.md) · [Related work](related-work.md) · [Contribution attribution](contribution-attribution.md) · [Research gaps](research-gaps.md)
 
 ## Research focus
 
+- **检索与结构**：NaturalProofs、TheoremSearch / TheoremGraph、Matlas 和 Lean Blueprint，区分候选依赖、引用恢复和数学贡献判断。
 - **局部验证**：[OSVerify §3](https://arxiv.org/html/2610.18089v1#S3)，理解分解、提议和验证的任务边界。
 - **文献对应**：[math-lineage](https://github.com/jnshi/math-lineage)，查看证据位置、关系分类与实际报告。
-- **新颖性信号**：PriorProof 与 Beyond Correctness，比较形式化依赖、检索与专家判断。
+- **新颖性近邻**：PriorProof、Beyond Correctness 与 Proof Perplexity，比较路线信号、判定管线、步骤非平凡性和实际评测。
+- **研究过程**：Aletheia、First Proof 与 Data for Mathematical Copilots，核对人工贡献、研究工作流与评价目标。
 - **宏观归因**：Who Solved It?，仅依据公开摘要讨论聚合与文献依赖问题。
 
 下列论文按技术路线组织。arXiv 日期为首次提交日期；原始实验条件与结果应以论文为准。新颖性相关预印本用于近邻工作比较，其成熟度与基础设施项目分开评估。
+
+## Literature and document processing
+
+| 日期 | 文献 | 研究关联 |
+| --- | --- | --- |
+| 2026-02-05 | [Semantic Search over 9 Million Mathematical Theorems](https://arxiv.org/abs/2602.05216) | 陈述级语义检索，服务于定位候选前作，而非自动新颖性裁决。 |
+| 2026-04-19 | [Matlas: A Semantic Search Engine for Mathematics](https://arxiv.org/abs/2604.17484) | 重点读 §3：依赖抽取与展开，为历史论文、教材中的结果提供检索入口。 |
+| 2026-06-24 | [TheoremGraph: Bridging Formal and Informal Mathematics](https://arxiv.org/abs/2606.25363) | 重点读 §3–5 和附录 G：候选依赖、跨形式匹配及引用恢复实验。 |
 
 ## Formal theorem proving
 
@@ -52,15 +62,21 @@
 
 | 日期 | 文献 | 研究关联 |
 | --- | --- | --- |
-| 2026-07-18 | [PriorProof: A Point-in-Time Measure of Technique Novelty for Formal Proofs](https://arxiv.org/abs/2607.16997) | 以历史形式化依赖足迹构造证明路线信号；限定构念与专家判断的关系。 **仅摘要。** |
-| 2026-08-02 | [Beyond Correctness: Toward Automated Novelty Verification with Lean 4](https://arxiv.org/abs/2608.14669) | 探索新颖性检查并讨论陈述忠实性、检索覆盖和复现障碍；初步研究。 **仅摘要。** |
+| 2024-12-19 | [Data for Mathematical Copilots: Better Ways of Presenting Proofs for Machine Learning](https://arxiv.org/abs/2412.15184) | 从数学工作流与非平凡重复讨论证明数据设计，为局部任务与标签提供方法背景。 |
+| 2026-02-10 | [Towards Autonomous Mathematics Research](https://arxiv.org/abs/2602.10177) | 重点读 §3.3 与 §5：区分文献识别、重新发现、新结果及人工贡献。 |
+| 2026-07-18 | [PriorProof: A Point-in-Time Measure of Technique Novelty for Formal Proofs](https://arxiv.org/abs/2607.16997) | 形式化路线非典型性信号；作者明确其不构成原创性检测，并讨论连接级新颖性盲点。 |
+| 2026-08-02 | [Beyond Correctness: Toward Automated Novelty Verification with Lean 4](https://arxiv.org/abs/2608.14669) | 已有新颖性判定管线及有限实验；需关注未触发分支、自匹配与陈述忠实性。 |
 | 2026-10-13 | [Who Solved It? Aggregation Bias and the Empty-Library Paradox in OpenAI's 722-Manuscript Mathematics Release](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7607840) | 聚合偏差与文献依赖的宏观讨论；当前仅依据可访问摘要，不将其统计当作因果归因证据。 **仅摘要。** |
+| 2026-10-15 | [Proof Perplexity: A Probabilistic Approach to Measuring non-triviality in Machine Generated Proofs](https://arxiv.org/abs/2610.22612) | 直接研究步骤可恢复性与非平凡性；探索性度量，需审查分布假设、代理变量与外部验证。 |
 
 ## 评测基准与研究材料
 
 | 日期 | 文献 | 研究关联 |
 | --- | --- | --- |
+| 2021-03-24 | [NaturalProofs: Mathematical Theorem Proving in Natural Language](https://arxiv.org/abs/2104.01112) | 参考结果检索和生成的基础任务；可检验前提找回能力。 |
 | 2021-08-31 | [MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics](https://arxiv.org/abs/2109.00110) | 了解跨形式化语言的竞赛证明基准。 |
 | 2024-07-15 | [PutnamBench: Evaluating Neural Theorem-Provers on the Putnam Mathematical Competition](https://arxiv.org/abs/2407.11214) | 考察比基础竞赛题更复杂的形式化证明任务。 |
 | 2024-11-07 | [FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI](https://arxiv.org/abs/2411.04872) | 理解研究级数学问题评测；题库并非全部公开。 |
+| 2025-05-21 | [MIRB: Mathematical Information Retrieval Benchmark](https://arxiv.org/abs/2505.15585) | 按陈述、答案、前提与公式分别评价检索；不能用相关性分数替代新颖性。 |
+| 2026-02-05 | [First Proof](https://arxiv.org/abs/2602.05192) | 研究级证明的专家评价与学术规范；不是自动贡献归因基准。 |
 | 2026-03-03 | [SorryDB: Can AI Provers Complete Real-World Lean Theorems?](https://arxiv.org/abs/2603.02668) | 了解从真实数学项目提取动态证明任务的方法。 |

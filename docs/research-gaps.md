@@ -1,6 +1,6 @@
 # Research Gaps and Evaluation
 
-[Overview](../README.md) · [Contribution attribution](contribution-attribution.md)
+[Overview](../README.md) · [Related work](related-work.md) · [Contribution attribution](contribution-attribution.md)
 
 工作假设：贡献归因的主要困难在于把论文中的数学内容、先前文献和专家判断连接起来。以下是基于本索引所覆盖工作的研究问题，不能视为“尚无任何研究”的断言。
 
@@ -8,20 +8,22 @@
 
 | 相关工作 | 已处理的问题 | 与拟研究目标的边界 |
 | --- | --- | --- |
-| [OSVerify](https://arxiv.org/html/2610.18089v1#S3) | 具体错误的提议与验证，降低专家审阅负担 | 目标是论证有效性，不能直接输出新颖性结论 |
-| [math-lineage](https://github.com/jnshi/math-lineage) | 具体数学内容与前作的对应及引用缺口 | 面向选中的对应案例；需扩展到完整论证和正确引用的内容 |
-| [PriorProof](https://arxiv.org/abs/2607.16997) | 相对历史 Mathlib 快照，用形式化依赖足迹衡量证明路线的非典型性 | 是受限的路线信号，与非形式化论文的结果新颖性、过程贡献不同 |
-| [Beyond Correctness](https://arxiv.org/abs/2608.14669) | 探索形式化/非形式化语料检索、自动 tactic 和证明距离用于新颖性检查 | 作者报告陈述忠实性、语料覆盖和复现问题；不能把编译或低相似度直接当作新颖性 |
-| [Who Solved It?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7607840) | 从汇总统计与文献依赖讨论归因 | 本索引仅读取摘要；宏观统计无法定位某一步的数学增量 |
+| [NaturalProofs](https://arxiv.org/abs/2104.01112)、[TheoremSearch](https://arxiv.org/abs/2602.05216)、[Matlas](https://arxiv.org/abs/2604.17484) | 数学参考结果任务和陈述级检索 | 以检索相关性和前提找回为核心，需继续核对适用条件 |
+| [Lean Blueprint](https://github.com/PatrickMassot/leanblueprint)、[TheoremGraph](https://arxiv.org/abs/2606.25363) | 作者标注结构、候选自动依赖及跨形式匹配 | 依赖图不是空白；重点是正确性、覆盖率和对贡献判断的作用 |
+| [TheoremGraph 附录 G](https://arxiv.org/html/2606.25363v1) | 已知引用被遮掉后的恢复实验 | 现成近邻任务；未引用技巧与新的连接仍须另测 |
+| [OSVerify](https://arxiv.org/html/2610.18089v1#S3)、[math-lineage](https://github.com/jnshi/math-lineage) | 局部查错和数学内容溯源 | 衔接到全文关键依赖及其数学增量 |
+| [PriorProof](https://arxiv.org/html/2607.16997v1)、[Proof Perplexity](https://arxiv.org/html/2610.22612v1) | 路线和步骤的非平凡性信号 | 代理变量与专家判断、库覆盖和证明冗余的关系 |
+| [Beyond Correctness / AViD Journal](https://arxiv.org/html/2608.14669v1) | 自动新颖性管线及有限实验 | 需要比较已有方案；其未触发分支和组合级贡献仍属限制 |
+| [Aletheia](https://arxiv.org/html/2602.10177v1)、[First Proof](https://1stproof.org/) | 研究实例分类、人工参与与专家评价 | 可借鉴协议，不能视为通用步骤级归因标签 |
 
-后两篇新颖性相关预印本作为近邻研究列出，不将单篇探索视为成熟基础设施。正式立项前还需要扩展相关工作检索，并比较它们的实际实现与专家评测。
+范围检索、历史背景、原始证据与暂不收录的线索见[相关工作分析](related-work.md)。本研究的创新性应相对于上述实际能力验证，不能宣称首次提出依赖图、引用恢复或数学新颖性判断。
 
 ## Gap map
 
 | 问题 | 已有基础 | 待检验的技术难点 | 可观察的结果 |
 | --- | --- | --- | --- |
-| 证明结构 | 文档解析、分段检查、形式化依赖 | 自然语言论证中的节点和边能否稳定恢复 | 专家标注的主张和关键依赖召回率 |
-| 跨论文对齐 | 文献检索、局部内容对应 | 符号改写、假设变化、间接引用及不同表述 | 对应证据的精确率和困难负例识别 |
+| 证明结构 | Blueprint、候选陈述图与形式化依赖 | 自动候选图能否覆盖和忠实表示主证明的关键连接 | 专家标注的主张和关键依赖召回率 |
+| 跨论文对齐 | 陈述检索、语义匹配、引用恢复与局部内容对应 | 符号改写、假设变化、间接引用及不同表述 | 对应证据的精确率和困难负例识别 |
 | 关键连接 | 证明搜索与错误检查 | 新增义务是已知引理、常规推导还是实质创新 | 候选连接的专家一致率与误报 |
 | routine 判断 | 标准库、自动 tactic、领域知识 | 领域和粒度不同导致标签漂移 | 明确先验下的专家一致性与弃判情况 |
 | 整体贡献 | 局部溯源报告 | 防止用旧步骤占比掩盖关键新连接 | 研究者能否从报告正确定位数学增量 |
@@ -43,9 +45,10 @@
 | 对照 | 回答的问题 |
 | --- | --- |
 | 直接整篇判断 | 分解是否优于让模型直接总结贡献 |
-| 关键词/BM25 检索 + 局部对应 | 相对简单检索，复杂检索带来什么增益 |
-| 引用网络检索 | 未引用前作是否是主要漏检来源 |
+| BM25 / NaturalProofs 类前提检索 + 局部对应 | 相对简单检索，复杂检索带来什么增益 |
+| TheoremSearch / Matlas 陈述检索，及 TheoremGraph 图扩展 | 语料与结构对未引用前作找回的帮助；统一查询与候选预算 |
 | 按主张检索 + 条件核对 | 显式数学结构是否减少错误对应 |
+| 已知引用恢复 / 未引用技巧发现分开评价 | 防止仅通过恢复原文引用就宣称贡献归因成功 |
 | 去掉独立验证阶段 | 提议与验证分离是否降低幻觉归因 |
 | 仅原文参考文献 / 扩展公开检索 | 检索边界对结论的影响；不解释为清除预训练知识 |
 | 有 / 无主证明依赖 | 图结构是否帮助区分关键贡献与外围技术细节 |

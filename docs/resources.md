@@ -10,6 +10,7 @@
 | --- | --- | --- |
 | [Lean 4](https://github.com/leanprover/lean4) | **形式化证明的语言与检查内核**。Lean 4 是本索引所列多个证明器共享的基础。 | 验证已编码命题，不能判断文献新颖性。 |
 | [Mathlib](https://github.com/leanprover-community/mathlib4) | **可复用的形式化数学知识库**。社区数学库，决定大量 Lean 任务的现成知识覆盖。 | 库中定理依赖不等于论文思想的历史来源。 |
+| [Lean Blueprint](https://github.com/PatrickMassot/leanblueprint) | **作者标注的非形式化与形式化证明依赖图**。在大型 Lean 形式化项目中使用的证明规划和依赖展示工具。 | 图由作者使用标记组织，不能当作自动恢复任意论文证明结构。 |
 
 ## Literature and document processing
 
@@ -17,6 +18,7 @@
 | --- | --- | --- |
 | [GROBID](https://github.com/grobidOrg/grobid) | **文献结构与参考文献解析**。成熟的学术文档结构化基础设施。 | 参考文献解析不识别证明技术依赖。 |
 | [MinerU](https://github.com/opendatalab/MinerU) | **PDF、版面与公式提取**。广泛使用的复杂文档结构化工具。 | 公式、编号和阅读顺序仍需与原页核对。 |
+| [TheoremSearch / TheoremGraph](https://github.com/uw-math-ai/TheoremSearch) | **陈述级检索、候选依赖图与形式化匹配**。研究级数学检索与图结构的代表性基础设施；同一项目族合并收录。 | 候选依赖和语义匹配需要验证，引用恢复实验不等于历史新颖性判定。 |
 
 ## Formal theorem proving
 
@@ -64,3 +66,4 @@
 | [SorryDB](https://github.com/SorryDB/SorryDB) | **真实 Lean 仓库任务**。把评测从固定竞赛题推进到真实未完成证明。 | 真实证明任务仍不等价于新定理发现。 |
 | [MATH](https://github.com/hendrycks/math) | **自然语言数学解题基准**。数学模型研究的基础评测资源。 | 最终答案评测不能识别证明创新。 |
 | [OpenAI Math](https://github.com/openai/math) | **研究手稿与证明材料**。研究级模型输出的集中分析语料，适合研究验证和归因。 | 各项验证状态不同，输出集合不等于独立的新结果清单。 |
+| [NaturalProofs](https://github.com/wellecks/naturalproofs) | **非形式化数学前提检索数据与基准**。基础性数学参考结果检索任务，可作为溯源检索对照。 | 已有引用关系不等于历史首创标签；跨领域迁移须另测。 |
