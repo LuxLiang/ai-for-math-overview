@@ -7,19 +7,24 @@
 
 理解 AI4Math 的能力边界、关键基础设施与开放问题，重点关注数学证明中的知识依赖和贡献归因：一个结果解决了什么问题，证明继承了什么，以及真正新增的数学内容在哪里。
 
-[能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [贡献归因](docs/contribution-attribution.md) · [研究缺口](docs/research-gaps.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
+[任务覆盖](docs/task-coverage.md) · [能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [贡献归因](docs/contribution-attribution.md) · [研究缺口](docs/research-gaps.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
 
-## Where AI4Math stands
+## Task coverage: Mathematical Contribution Attribution
 
-| 研究环节 | 已有能力与代表性工作 | 仍需解决的问题 |
+以一篇论文为输入，目标是解释主证明的结构、对既有工作的依赖，以及结果与证明分别新增了什么。下表比较本索引已核对的代表性工作；“有局部能力”不表示该环节已经可靠解决。
+
+| 目标 | 现有工作做到哪里 | 相对本研究目标的缺口 |
 | --- | --- | --- |
-| 解题与证明生成 | [DeepSeekMath V2](https://github.com/deepseek-ai/DeepSeek-Math-V2)、[Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math)：数学推理、自验证与工具使用 | 研究问题中的长程依赖、可靠验证，以及输出与已有文献的关系 |
-| 形式化证明 | [Lean / Mathlib](https://github.com/leanprover-community/mathlib4)、[DeepSeek-Prover V2](https://github.com/deepseek-ai/DeepSeek-Prover-V2)、[Goedel-Prover V2](https://github.com/Goedel-LM/Goedel-Prover-V2)：在给定形式化陈述下生成可检查证明 | 自然语言陈述的忠实性、数学库覆盖，以及形式化依赖与思想来源之间的映射 |
-| 数学与算法发现 | [AlphaTensor](https://github.com/google-deepmind/alphatensor)、[FunSearch](https://github.com/google-deepmind/funsearch)、[AlphaEvolve](https://deepmind.google/blog/alphaevolve-impact/)：在可评价的搜索空间发现算法与构造 | 缺少自动评价器的开放问题，以及发现结果的贡献判定 |
-| 非形式化证明审阅 | [OSVerify](https://arxiv.org/html/2610.18089v1#S3)：围绕具体疑点组织错误搜索与验证 | 审阅覆盖率、漏检、领域迁移与有限专家时间的分配 |
-| 数学内容溯源 | [math-lineage](https://github.com/jnshi/math-lineage)：将具体结果、技巧与先前文献建立对应 | 从局部对应扩展到整条证明的依赖与新颖性分析 |
+| 拆解主证明 | OSVerify 可以分段并围绕局部论证提出疑点 | 文本分段还需转为数学主张与推导依赖，且覆盖整条主证明 |
+| 识别已知结果和技巧 | math-lineage 给出具体内容与前作的双侧位置、关系及引用状态 | 从选中的对应发现扩展到包括已充分引用内容在内的完整分析 |
+| 检查 3 → 4 这样的跳跃 | OSVerify 可检查局部论证是否存在实质问题；math-lineage 可提供前作线索 | 联合判断它属于既有结果、routine、实质改造、新连接还是未完成义务 |
+| 判断 routine | 标准库、自动 tactic 和形式化依赖提供可检查的局部信号 | 明确领域先验与粒度，验证这些信号是否符合专家的数学判断 |
+| 区分结果与证明的新颖性 | math-lineage 区分结果/技巧关系；PriorProof 提供受限的证明路线信号 | 对新结果、新证明、新场景、反例分别建立证据和评测 |
+| 解释整体贡献 | math-lineage 提供局部重要性标签 | 说明哪些连接支撑主定理，避免按未匹配步骤比例推断原创性 |
 
-这些环节已有可复用的工具与研究实例；它们提供的证据不同。证明通过检查，支持的是陈述正确性；新颖性还需要对照既有文献。详细实验条件与适用范围见[能力现状](docs/landscape.md)。
+依据：[OSVerify §3](https://arxiv.org/html/2610.18089v1#S3)、[math-lineage](https://github.com/jnshi/math-lineage)、[PriorProof](https://arxiv.org/abs/2607.16997)。接口核对、适用范围和下一阶段交付物见[任务覆盖分析](docs/task-coverage.md)。
+
+**本仓库进度**：已完成代表性工作整理、接口层面对照和研究问题定义；尚未完成真实论文的完整贡献分析、系统复现或专家评测。下一阶段需要用实际案例检验上述缺口，而非仅增加资源条目。
 
 ## Infrastructure map
 
