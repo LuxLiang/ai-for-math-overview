@@ -80,6 +80,8 @@ def render(repos, readings):
 
 ## Research focus
 
+- **论证与内容比较**：IATC、BEq+、SAE / ACE 与 FaithAlign，核对联合前提、上下文与“同一数学内容”的定义。
+- **贡献提取近邻**：Mathematical Instruments 和后续 Reusable Reasoning，按实际读取范围比较与目标的重叠。
 - **检索与结构**：NaturalProofs、TheoremSearch / TheoremGraph、Matlas 和 Lean Blueprint，区分候选依赖、引用恢复和数学贡献判断。
 - **局部验证**：[OSVerify §3](https://arxiv.org/html/2610.18089v1#S3)，理解分解、提议和验证的任务边界。
 - **文献对应**：[math-lineage](https://github.com/jnshi/math-lineage)，查看证据位置、关系分类与实际报告。
@@ -97,7 +99,7 @@ def render(repos, readings):
         doc += f'## {title}\n\n| 日期 | 文献 | 研究关联 |\n| --- | --- | --- |\n'
         for p in sorted(group, key=lambda p: p['date']):
             label = ' [官方文章]' if p['kind'] == 'article' else ''
-            scope = ' **仅摘要。**' if p['reading_scope'] == 'abstract-only' else ''
+            scope = ' **仅摘要。**' if p['reading_scope'] == 'abstract-only' else (' **仅公开描述。**' if p['reading_scope'] == 'public-description-only' else '')
             doc += f'| {p["date"]} | [{cell(p["title"])}]({p["url"]}){label} | {cell(p["note_zh"])}{scope} |\n'
         doc += '\n'
     bib = '% Discovery references. Obtain complete citation metadata from each primary source.\n\n'

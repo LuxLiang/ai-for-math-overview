@@ -29,7 +29,7 @@
 
 重点读取 OSVerify v1 的第 3 节及评测设置；软件接口另据提交 [c43385b](https://github.com/OSVerify/OSVerify/tree/c43385bcbedec943cabe0d7e95df5b50404d9acb) 的文档。math-lineage 的关系定义和报告结构据提交 [da8c0e6](https://github.com/jnshi/math-lineage/tree/da8c0e694f00c2575ccf9d26c0ea560543ef0a1b) 核对。两者的原文说明、软件实现和本索引提出的扩展方向分别表述。
 
-SSRN 7607840 的全文访问返回 403，现有评述仅读取可访问的公开摘要。扩展检索后补读了 PriorProof 和 Beyond Correctness 的评测/局限，以及陈述检索、依赖图和引用恢复等近邻工作；具体范围见[相关工作](related-work.md)。作者论文的实验、自动评审指标与独立复现分别表述；未逐个运行或复现实验。
+SSRN 7607840 和 Zenodo 23523260 的全文访问返回 403，分别仅读取可访问摘要和公开描述，不将其标记为已核对全文。扩展检索后补读了 PriorProof 和 Beyond Correctness 的评测/局限，以及陈述检索、依赖图和引用恢复等近邻工作；具体范围见[相关工作](related-work.md)和[近邻审查](overlap-audit.md)。作者论文的实验、自动评审指标与独立复现分别表述；未逐个运行或复现实验。
 
 ## Interpretation
 

@@ -394,5 +394,101 @@
     "note_zh": "直接研究步骤可恢复性与非平凡性；探索性度量，需审查分布假设、代理变量与外部验证。",
     "checked_on": "2026-10-25",
     "reading_scope": "full-text-method-and-limitations"
+  },
+  {
+    "id": "1803.06500",
+    "title": "Argumentation theory for mathematical argument",
+    "date": "2018-03-17",
+    "url": "https://arxiv.org/abs/1803.06500",
+    "category": "attribution",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "数学对象、推断、策略和论证结构的历史建模基础；不等于自动新颖性判定。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "author-manuscript-selected-method-and-case-sections"
+  },
+  {
+    "id": "2406.07222",
+    "title": "Reliable Evaluation and Benchmarks for Statement Autoformalization",
+    "date": "2024-06-11",
+    "url": "https://arxiv.org/abs/2406.07222",
+    "category": "proving",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "BEq+、ProofNetVerif 与研究级陈述评测；比较指标与历史归因分别评价。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-v3-task-definition-and-metric-sections"
+  },
+  {
+    "id": "2410.20936",
+    "title": "Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency",
+    "date": "2024-10-28",
+    "url": "https://arxiv.org/abs/2410.20936",
+    "category": "proving",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "符号等价与语义一致性用于选择形式化候选；NeurIPS 2024 代表工作。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "abstract-and-published-method-description"
+  },
+  {
+    "id": "2610.17090",
+    "title": "What the Machine Invented: Mining New Mathematical Instruments from OpenAI's October 2026 Release of AI-Generated Mathematics",
+    "date": "2026-10-12",
+    "url": "https://arxiv.org/abs/2610.17090",
+    "category": "attribution",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "直接提取 AI 论文中的数学工具并比较前作；与本目标明显重叠，判断暂定且未独立认证。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-v1-method-and-limitations"
+  },
+  {
+    "id": "2610.18498",
+    "title": "Aligning Faithfulness for Theory-Scale Autoformalization",
+    "date": "2026-10-13",
+    "url": "https://arxiv.org/html/2610.18498v1",
+    "category": "proving",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "在上下文下对齐自然语言与形式化片段，定位不忠实或不可判定内容；非历史归因。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-v1-formulation-annotation-and-evaluation"
+  },
+  {
+    "id": "2610.25018",
+    "title": "Structure-Aware Equivalence for Evaluating Autoformalized Statements",
+    "date": "2026-10-18",
+    "url": "https://arxiv.org/html/2610.25018v3",
+    "category": "proving",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "区分结构保持与整句逻辑等价；有限证明搜索未决不能当作不等价，近期预印本。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-v3-formulation-and-limitations"
+  },
+  {
+    "id": "2502.10454",
+    "title": "One Example Shown, Many Concepts Known! Counterexample-Driven Conceptual Reasoning in Mathematical LLMs",
+    "date": "2025-02-12",
+    "url": "https://arxiv.org/abs/2502.10454",
+    "category": "evaluation",
+    "kind": "paper",
+    "repository": null,
+    "note_zh": "反例推理的相关诊断任务；有效性与历史新颖性必须分别评价。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "abstract-and-upstream-task-description"
+  },
+  {
+    "id": "zenodo23523260",
+    "title": "From Mathematical Instruments to Reusable Reasoning: A Second Phase of Extraction from AI-Generated Mathematics",
+    "date": "2026-10-21",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://zenodo.org/records/23523260",
+    "repository": null,
+    "note_zh": "公开描述与来源推断图直接相关；PDF 403，仅读公开描述，未核对全文或实现。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "public-description-only"
   }
 ]

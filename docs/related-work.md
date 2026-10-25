@@ -1,6 +1,6 @@
 # Related Work: From Retrieval to Contribution Attribution
 
-[Overview](../README.md) · [Task coverage](task-coverage.md) · [Research gaps](research-gaps.md)
+[Overview](../README.md) · [Overlap audit](overlap-audit.md) · [Task coverage](task-coverage.md) · [Research gaps](research-gaps.md)
 
 数学贡献归因已有相关的数据、检索系统、依赖图和探索性判定方法。研究定位需要逐层比较，不能把组件缺失和组件尚未可靠组合混为一谈。
 
@@ -66,6 +66,12 @@
 
 本轮读取了 TheoremGraph 的方法、验证与附录 G，Matlas 的方法节，Aletheia 的分类讨论，PriorProof 的解释与局限，AViD Journal 的评测及局限，以及 Proof Perplexity 的方法和局限。没有运行这些系统，也没有把自动评审或作者报告当作独立专家验证。
 
+## Follow-up: argument representation and semantic fidelity
+
+继续追查后，补充了 IATC 的数学论证建模、BEq+ / SAE / FaithAlign 的数学内容比较，以及 Mathematical Instruments 的贡献提取近邻。它们意味着“从论文得到贡献候选与来源图”也已有直接重叠工作。完整比较、版本和读取范围见[近邻重叠审查](overlap-audit.md)。
+
+任务定义也相应收紧：联合前提以推断单位表示；来源、改造、routine、论证状态和新颖性分别标注，不能强制用一个互斥标签覆盖所有问题。[操作规范与构造诊断](task-specification.md)
+
 ## Research implication
 
-已有工作覆盖的内容比“只有生成和查错”更广。可检验的研究定位应收窄为：**在完整主证明的关键连接上，对沿用、routine、实质改造、新连接和未完成义务提供可复核的定性证据。** 是否构成新的方法贡献，还要与上述近邻的完整实现、评测任务和专家标签进行比较。
+已有工作覆盖的内容比“只有生成和查错”更广。可检验的研究定位应收窄为：**在完整主证明的关键推断上，分别核对来源、适用条件、改造义务、routine 补全和论证状态，再给出有边界的新颖性意见。** 是否构成新的方法贡献，还要与上述近邻的完整实现、评测任务和专家标签进行比较。

@@ -12,8 +12,8 @@
     "upstream_description": "Lean 4 programming language and theorem prover",
     "checked_on": "2026-10-25",
     "role": "形式化证明的语言与检查内核",
-    "selection_reason_zh": "Lean 4 是本索引所列多个证明器共享的基础。",
-    "limitation_zh": "验证已编码命题，不能判断文献新颖性。",
+    "selection_reason_zh": "多个证明器共享的基础；当前工具链含 lake check 与 lake comparator。",
+    "limitation_zh": "检查指定形式化目标和公理，不直接认证自然语言原意或历史新颖性。",
     "tier": "representative"
   },
   {

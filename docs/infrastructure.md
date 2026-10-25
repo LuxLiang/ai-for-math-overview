@@ -38,6 +38,12 @@
 
 LeanDojo 与 Pantograph分别代表数据/检索框架和证明交互接口；二者按层次比较，避免把同类包装器都加入清单。
 
+## Statement matching and validation boundaries
+
+[BEq+ / ProofNetVerif](https://aclanthology.org/2025.emnlp-main.907/)提供参考式陈述比较和人工标注数据；[SAE / ACE](https://arxiv.org/html/2610.25018v3)与[FaithAlign](https://arxiv.org/html/2610.18498v1)分别研究结构保持和带上下文的片段对齐。对归因任务，比较结果仍需映射到“前作在何种条件下覆盖当前内容”，不能直接解释为原创性。
+
+Lean 当前提供 [`lake check` / `lake comparator`](https://lean-lang.org/doc/reference/latest/ValidatingProofs/)等验证工具，旧独立 comparator 仓库已提示迁移至工具链。它们用于核对形式化挑战和证明工件；不认证自然语言原意或历史首创。详细边界见[重叠审查](overlap-audit.md)。
+
 ## 3. Informal verification
 
 [OSVerify](https://github.com/OSVerify/OSVerify)代表面向非形式化证明和论文的审阅路线。其研究论文侧重“错误提议—错误验证”；当前软件还提供文献检索与证据读取接口。软件能力应按提交版本检查，不能把仓库后续实现视为论文实验本身。

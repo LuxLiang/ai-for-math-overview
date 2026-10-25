@@ -7,7 +7,9 @@
 
 理解 AI4Math 的能力边界、关键基础设施与开放问题，重点关注数学证明中的知识依赖和贡献归因：一个结果解决了什么问题，证明继承了什么，以及真正新增的数学内容在哪里。
 
-[相关工作](docs/related-work.md) · [任务覆盖](docs/task-coverage.md) · [能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [贡献归因](docs/contribution-attribution.md) · [研究缺口](docs/research-gaps.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
+[任务定义](docs/task-specification.md) · [近邻重叠审查](docs/overlap-audit.md) · [任务覆盖](docs/task-coverage.md) · [研究缺口](docs/research-gaps.md)
+
+[相关工作](docs/related-work.md) · [能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
 
 ## Task coverage: Mathematical Contribution Attribution
 
@@ -18,11 +20,13 @@
 | 表示证明结构 | Lean Blueprint 可组织作者标注的依赖；TheoremGraph 已抽取候选陈述依赖 | 核对结构的正确性、完整性和适合贡献判断的粒度 |
 | 找到既有结果 | NaturalProofs 有前提检索任务；TheoremSearch、Matlas 提供陈述级检索 | 验证候选结果的假设与结论是否真正覆盖当前步骤 |
 | 恢复文献来源 | TheoremGraph 附录 G 已做引用恢复实验；math-lineage 输出内容对应 | 从已有引用找回扩展到未引用技巧、间接来源和整条主证明 |
-| 检查关键跳跃 | OSVerify 可检查疑点，现有检索和依赖图能提供线索 | 区分沿用、routine、实质改造、新连接和未完成义务 |
+| 检查关键跳跃 | OSVerify 可检查疑点，现有检索和依赖图能提供线索 | 分别核对来源、条件、改造、routine 补全依据与论证状态，允许多个判断并存 |
 | 判断证明非平凡性 | PriorProof、Proof Perplexity 已研究相对库的路线和步骤信号 | 验证信号是否对应专家认可的数学增量 |
+| 对齐数学内容 | BEq+、SAE / ACE、FaithAlign 已研究陈述或片段的比较 | 明确比较对象；整句互相可证不能自动代表同一数学结果 |
+| 提取贡献候选 | Mathematical Instruments 已提取证明机制并比较前作；后续来源图工作与目标直接重叠 | 与近邻同条件比较准确性、覆盖和专家复核，不能把输出贡献图本身视为创新 |
 | 区分新颖性与过程贡献 | AViD Journal 已尝试新颖性管线；Aletheia 讨论结果与人工参与分类 | 分别评估结果、证明、场景与反例，保留来源和未决项 |
 
-研究定位需要建立在这些已有能力之上。方法、评测边界与筛选依据见[相关工作分析](docs/related-work.md)；具体任务对照见[任务覆盖](docs/task-coverage.md)。
+研究定位需要建立在这些已有能力之上。新增近邻、读取范围和重叠结论见[近邻审查](docs/overlap-audit.md)；可复核的判断单位与诊断案例见[任务定义](docs/task-specification.md)。
 
 ## Infrastructure map
 
@@ -49,7 +53,7 @@
 | **哪些属于 routine？** | 给定领域与前提，说明能用哪些标准结果推得；由领域专家核对 |
 | **贡献由谁完成？** | 记录人、模型、工具与文献的实际作用；仅有文本相似性不能确定生成过程 |
 
-必须区分**论证缺口**和**创新性连接**：缺少证明的跳步首先是待验证义务，不能直接记作贡献。检索不到前作的步骤也应保留为未决。[完整分析框架 →](docs/contribution-attribution.md)
+来源、routine、正确性与新颖性分别记录。一段论证可以复用旧方法、包含新改造，又留有待证明义务；检索不到前作的步骤保留为未决。[完整分析框架 →](docs/contribution-attribution.md)
 
 ## Research direction
 
@@ -57,7 +61,7 @@
 
 ```mermaid
 flowchart LR
-    A[论文与版本] --> B[主张和证明依赖]
+    A[论文与版本] --> B[主张与联合前提推断]
     B --> C[候选前作检索]
     C --> D[局部对应与论证检查]
     D --> E[贡献判断与未决项]

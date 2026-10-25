@@ -4,6 +4,8 @@
 
 ## Research focus
 
+- **论证与内容比较**：IATC、BEq+、SAE / ACE 与 FaithAlign，核对联合前提、上下文与“同一数学内容”的定义。
+- **贡献提取近邻**：Mathematical Instruments 和后续 Reusable Reasoning，按实际读取范围比较与目标的重叠。
 - **检索与结构**：NaturalProofs、TheoremSearch / TheoremGraph、Matlas 和 Lean Blueprint，区分候选依赖、引用恢复和数学贡献判断。
 - **局部验证**：[OSVerify §3](https://arxiv.org/html/2610.18089v1#S3)，理解分解、提议和验证的任务边界。
 - **文献对应**：[math-lineage](https://github.com/jnshi/math-lineage)，查看证据位置、关系分类与实际报告。
@@ -26,10 +28,14 @@
 | 日期 | 文献 | 研究关联 |
 | --- | --- | --- |
 | 2023-06-27 | [LeanDojo: Theorem Proving with Retrieval-Augmented Language Models](https://arxiv.org/abs/2306.15626) | 理解证明环境、前提检索和 ReProver 的关系。 |
+| 2024-06-11 | [Reliable Evaluation and Benchmarks for Statement Autoformalization](https://arxiv.org/abs/2406.07222) | BEq+、ProofNetVerif 与研究级陈述评测；比较指标与历史归因分别评价。 |
+| 2024-10-28 | [Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency](https://arxiv.org/abs/2410.20936) | 符号等价与语义一致性用于选择形式化候选；NeurIPS 2024 代表工作。 |
 | 2025-04-30 | [DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition](https://arxiv.org/abs/2504.21801) | 研究复杂定理的子目标分解与强化学习。 |
 | 2025-08-05 | [Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction](https://arxiv.org/abs/2508.03613) | 研究分阶段数据生成和编译器反馈自纠正。 |
 | 2025-11-12 | [Olympiad-level formal mathematical reasoning with reinforcement learning](https://www.nature.com/articles/s41586-025-09833-y) | AlphaProof 方法论文；论文公开不代表训练系统和权重完整开放。 |
 | 2026-07-02 | [Leanstral 1.5: Proof Abundance for All](https://mistral.ai/news/leanstral-1-5/) [官方文章] | 后续模型版本介绍；文章保留不表示实验 API 仍可用。 |
+| 2026-10-13 | [Aligning Faithfulness for Theory-Scale Autoformalization](https://arxiv.org/html/2610.18498v1) | 在上下文下对齐自然语言与形式化片段，定位不忠实或不可判定内容；非历史归因。 |
+| 2026-10-18 | [Structure-Aware Equivalence for Evaluating Autoformalized Statements](https://arxiv.org/html/2610.25018v3) | 区分结构保持与整句逻辑等价；有限证明搜索未决不能当作不等价，近期预印本。 |
 
 ## Mathematical reasoning
 
@@ -62,12 +68,15 @@
 
 | 日期 | 文献 | 研究关联 |
 | --- | --- | --- |
+| 2018-03-17 | [Argumentation theory for mathematical argument](https://arxiv.org/abs/1803.06500) | 数学对象、推断、策略和论证结构的历史建模基础；不等于自动新颖性判定。 |
 | 2024-12-19 | [Data for Mathematical Copilots: Better Ways of Presenting Proofs for Machine Learning](https://arxiv.org/abs/2412.15184) | 从数学工作流与非平凡重复讨论证明数据设计，为局部任务与标签提供方法背景。 |
 | 2026-02-10 | [Towards Autonomous Mathematics Research](https://arxiv.org/abs/2602.10177) | 重点读 §3.3 与 §5：区分文献识别、重新发现、新结果及人工贡献。 |
 | 2026-07-18 | [PriorProof: A Point-in-Time Measure of Technique Novelty for Formal Proofs](https://arxiv.org/abs/2607.16997) | 形式化路线非典型性信号；作者明确其不构成原创性检测，并讨论连接级新颖性盲点。 |
 | 2026-08-02 | [Beyond Correctness: Toward Automated Novelty Verification with Lean 4](https://arxiv.org/abs/2608.14669) | 已有新颖性判定管线及有限实验；需关注未触发分支、自匹配与陈述忠实性。 |
+| 2026-10-12 | [What the Machine Invented: Mining New Mathematical Instruments from OpenAI's October 2026 Release of AI-Generated Mathematics](https://arxiv.org/abs/2610.17090) | 直接提取 AI 论文中的数学工具并比较前作；与本目标明显重叠，判断暂定且未独立认证。 |
 | 2026-10-13 | [Who Solved It? Aggregation Bias and the Empty-Library Paradox in OpenAI's 722-Manuscript Mathematics Release](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7607840) | 聚合偏差与文献依赖的宏观讨论；当前仅依据可访问摘要，不将其统计当作因果归因证据。 **仅摘要。** |
 | 2026-10-15 | [Proof Perplexity: A Probabilistic Approach to Measuring non-triviality in Machine Generated Proofs](https://arxiv.org/abs/2610.22612) | 直接研究步骤可恢复性与非平凡性；探索性度量，需审查分布假设、代理变量与外部验证。 |
+| 2026-10-21 | [From Mathematical Instruments to Reusable Reasoning: A Second Phase of Extraction from AI-Generated Mathematics](https://zenodo.org/records/23523260) | 公开描述与来源推断图直接相关；PDF 403，仅读公开描述，未核对全文或实现。 **仅公开描述。** |
 
 ## 评测基准与研究材料
 
@@ -77,6 +86,7 @@
 | 2021-08-31 | [MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics](https://arxiv.org/abs/2109.00110) | 了解跨形式化语言的竞赛证明基准。 |
 | 2024-07-15 | [PutnamBench: Evaluating Neural Theorem-Provers on the Putnam Mathematical Competition](https://arxiv.org/abs/2407.11214) | 考察比基础竞赛题更复杂的形式化证明任务。 |
 | 2024-11-07 | [FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI](https://arxiv.org/abs/2411.04872) | 理解研究级数学问题评测；题库并非全部公开。 |
+| 2025-02-12 | [One Example Shown, Many Concepts Known! Counterexample-Driven Conceptual Reasoning in Mathematical LLMs](https://arxiv.org/abs/2502.10454) | 反例推理的相关诊断任务；有效性与历史新颖性必须分别评价。 |
 | 2025-05-21 | [MIRB: Mathematical Information Retrieval Benchmark](https://arxiv.org/abs/2505.15585) | 按陈述、答案、前提与公式分别评价检索；不能用相关性分数替代新颖性。 |
 | 2026-02-05 | [First Proof](https://arxiv.org/abs/2602.05192) | 研究级证明的专家评价与学术规范；不是自动贡献归因基准。 |
 | 2026-03-03 | [SorryDB: Can AI Provers Complete Real-World Lean Theorems?](https://arxiv.org/abs/2603.02668) | 了解从真实数学项目提取动态证明任务的方法。 |

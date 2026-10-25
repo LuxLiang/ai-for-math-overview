@@ -1,6 +1,6 @@
 # Task Coverage: Mathematical Contribution Attribution
 
-[Overview](../README.md) · [Related work](related-work.md) · [Analysis protocol](contribution-attribution.md) · [Evaluation design](research-gaps.md)
+[Overview](../README.md) · [Related work](related-work.md) · [Task specification](task-specification.md) · [Analysis protocol](contribution-attribution.md) · [Evaluation design](research-gaps.md)
 
 ## Target output
 
@@ -18,10 +18,12 @@
 | [math-lineage](https://github.com/jnshi/math-lineage) | 当前内容与前作的位置、关系与引用状态 | 全文每条关键依赖都有可靠归因 |
 | [OSVerify](https://arxiv.org/html/2610.18089v1#S3) | 对具体错误提出和验证疑点 | 将推导边可靠分类为 routine、实质改造或新连接 |
 | [PriorProof](https://arxiv.org/abs/2607.16997)、[Proof Perplexity](https://arxiv.org/abs/2610.22612) | 形式化路线和步骤的非典型性、非平凡性信号 | 与领域专家认可的数学原创性等价 |
+| [Mathematical Instruments](https://arxiv.org/html/2610.17090v1)及[后续来源图描述](https://zenodo.org/records/23523260) | 贡献候选提取、前作比较；后续还提出联合前提的来源推断图 | 完整独立评测已经证明这些新颖性意见正确；后续全文本次仍未获得 |
+| [BEq+](https://aclanthology.org/2025.emnlp-main.907/)、[SAE / ACE](https://arxiv.org/html/2610.25018v3)、[FaithAlign](https://arxiv.org/html/2610.18498v1) | 陈述或片段的语义比较、上下文和未决状态 | 一次比较成功就认证历史首创，或一个统一指标适用于所有数学关系 |
 | [AViD Journal](https://arxiv.org/html/2608.14669v1) | 新颖性判定管线及有限评测 | 评测已经充分覆盖各分支、语料范围和组合级贡献 |
 | [Aletheia](https://arxiv.org/html/2602.10177v1) | 对研究实例区分重新发现、文献识别、新结果与人工参与 | 这些归因已完全自动完成或形成通用金标准 |
 
-依赖图、候选检索和新颖性管线都已有近邻工作。待验证的重点是它们是否足以支持**完整主证明关键连接的定性归因**，不能把“建立一个图”本身视为尚无人做过。详见[相关工作](related-work.md)。
+依赖图、候选检索和新颖性管线都已有近邻工作。贡献提取与来源图也已有直接近邻，待验证的重点是**关键推断的多维证据能否通过独立核对**，不能把“建立一个图”本身视为尚无人做过。详见[相关工作](related-work.md)。
 
 ## What the actual output shows
 
@@ -39,9 +41,9 @@
 
 OSVerify 的[输出协议](https://github.com/OSVerify/OSVerify/blob/c43385bcbedec943cabe0d7e95df5b50404d9acb/docs/output-contract.md)记录审阅范围、疑点、审核和完成状态。这里的覆盖指计划中的审阅流程；不能据此认定已经恢复了论文的数学依赖图，或完成贡献归因。
 
-## The missing decision: 3 → 4
+## The target decision: 3 → 4
 
-假设第 1–3 步已经由前作 A 覆盖。从第 3 步到第 4 步，必须逐项检验：
+假设第 1–3 步已经由前作 A 覆盖。从第 3 步到第 4 步，必须逐项检验。下列解释并非互斥；来源、routine、改造和论证状态分别记录，见[任务规范](task-specification.md)：
 
 | 候选解释 | 需要补齐的证据 |
 | --- | --- |
@@ -59,7 +61,7 @@ OSVerify 的[输出协议](https://github.com/OSVerify/OSVerify/blob/c43385bcbed
 | --- | --- | --- |
 | 代表性工作梳理 | 已扩展检索前提任务、陈述检索、依赖图、引用恢复和新颖性近邻 | 后续维护与补充近邻研究 |
 | 接口核对 | 已核对溯源记录、审阅协议及新增工作的方法/评测定义 | 实际运行后的质量、成本和覆盖率 |
-| 任务定义 | 已提出结果、证明、场景、反例与过程的分维度协议 | 专家确认标签含义与适用粒度 |
+| 任务定义 | 已收紧为来源、条件、改造、routine、论证状态及新颖性等独立维度 | 专家确认标签含义与适用粒度 |
 | 完整真实案例 | 尚未完成 | 从论文主定理追溯到关键步骤和前作，逐条保留证据 |
 | routine 与新连接判断 | 尚未评测 | 独立专家标注、分歧记录与模型对照 |
 | 可运行归因系统 | 尚未实现 | 可复现流程、失败分析与基线比较 |

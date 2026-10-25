@@ -1,6 +1,6 @@
 # Research Gaps and Evaluation
 
-[Overview](../README.md) · [Related work](related-work.md) · [Contribution attribution](contribution-attribution.md)
+[Overview](../README.md) · [Task specification](task-specification.md) · [Overlap audit](overlap-audit.md) · [Related work](related-work.md) · [Contribution attribution](contribution-attribution.md)
 
 工作假设：贡献归因的主要困难在于把论文中的数学内容、先前文献和专家判断连接起来。以下是基于本索引所覆盖工作的研究问题，不能视为“尚无任何研究”的断言。
 
@@ -14,6 +14,8 @@
 | [OSVerify](https://arxiv.org/html/2610.18089v1#S3)、[math-lineage](https://github.com/jnshi/math-lineage) | 局部查错和数学内容溯源 | 衔接到全文关键依赖及其数学增量 |
 | [PriorProof](https://arxiv.org/html/2607.16997v1)、[Proof Perplexity](https://arxiv.org/html/2610.22612v1) | 路线和步骤的非平凡性信号 | 代理变量与专家判断、库覆盖和证明冗余的关系 |
 | [Beyond Correctness / AViD Journal](https://arxiv.org/html/2608.14669v1) | 自动新颖性管线及有限实验 | 需要比较已有方案；其未触发分支和组合级贡献仍属限制 |
+| [Mathematical Instruments](https://arxiv.org/html/2610.17090v1)及[后续来源图描述](https://zenodo.org/records/23523260) | 直接提取数学机制、比较前作和提出来源推断图 | 已有直接重叠；重点转向可复核判断和独立评测，后续全文尚待获得 |
+| [IATC](https://arxiv.org/abs/1803.06500)、[BEq+](https://aclanthology.org/2025.emnlp-main.907/)、[SAE / ACE](https://arxiv.org/html/2610.25018v3)、[FaithAlign](https://arxiv.org/html/2610.18498v1) | 论证建模、陈述及局部语义对齐 | 不能把表示法或“相似内容”比较本身当作新颖性归因的创新 |
 | [Aletheia](https://arxiv.org/html/2602.10177v1)、[First Proof](https://1stproof.org/) | 研究实例分类、人工参与与专家评价 | 可借鉴协议，不能视为通用步骤级归因标签 |
 
 范围检索、历史背景、原始证据与暂不收录的线索见[相关工作分析](related-work.md)。本研究的创新性应相对于上述实际能力验证，不能宣称首次提出依赖图、引用恢复或数学新颖性判断。
@@ -51,11 +53,12 @@
 | 已知引用恢复 / 未引用技巧发现分开评价 | 防止仅通过恢复原文引用就宣称贡献归因成功 |
 | 去掉独立验证阶段 | 提议与验证分离是否降低幻觉归因 |
 | 仅原文参考文献 / 扩展公开检索 | 检索边界对结论的影响；不解释为清除预训练知识 |
+| 数学工具提取/来源图近邻与本方法使用相同材料 | 测量是否减少错误归因、未支持的新颖性判断与关键遗漏 |
 | 有 / 无主证明依赖 | 图结构是否帮助区分关键贡献与外围技术细节 |
 
 ### Annotation
 
-请领域专家分别标注数学关系、条件是否适用、主证明中的重要性、routine 判断和结论置信度。允许弃判，记录争议理由；展示模型建议前先获得独立判断，降低锚定效应。多位专家之间的分歧是研究对象的一部分。
+请领域专家分别标注来源关系、条件是否适用、改造义务、主证明中的作用、routine 补全依据和论证状态；这些维度不互斥。允许弃判，记录争议理由；展示模型建议前先获得独立判断，降低锚定效应。多位专家之间的分歧是研究对象的一部分。
 
 ### Metrics
 
@@ -64,10 +67,11 @@
 - **新颖性误报**：将已知结果、普通推导或证明缺口错误标为新贡献的情况。
 - **贡献漏报**：将专家确认的新连接误归为沿用或 routine 的情况。
 - **覆盖与弃判**：多少关键主张已审阅，多少仍缺全文、证据或专家判断。
+- **结构稳健性**：变量改名、等价改写和拆分/合并步骤不应凭空改变贡献判断；联合前提与替代路线单独检查。
 - **专家成本**：每条确认发现的审阅时间、需读的来源数及证据充分程度。
 
 引用数量、步骤数量、文本相似度与 tactic 长度可以作为诊断变量；它们都不能直接充当贡献比例。
 
 ## First deliverable
 
-一个经专家核对的案例集、一套可查看原文的步骤级证据格式，以及对上述基线的比较，足以检验方向是否成立。优先验证“能否可靠定位数学增量”，再考虑自动化打分和大规模运行。
+先按[任务规范](task-specification.md)构建经专家核对的关键推断案例集，再比较现有提取、检索、图辅助与局部验证方法。需要测量每个维度的证据质量，而非只完成一张贡献图。优先验证“能否可靠定位数学增量”，再考虑自动化打分和大规模运行。

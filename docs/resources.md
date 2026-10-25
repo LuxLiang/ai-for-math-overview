@@ -8,7 +8,7 @@
 
 | 项目 | 角色与收录理由 | 能力边界 |
 | --- | --- | --- |
-| [Lean 4](https://github.com/leanprover/lean4) | **形式化证明的语言与检查内核**。Lean 4 是本索引所列多个证明器共享的基础。 | 验证已编码命题，不能判断文献新颖性。 |
+| [Lean 4](https://github.com/leanprover/lean4) | **形式化证明的语言与检查内核**。多个证明器共享的基础；当前工具链含 lake check 与 lake comparator。 | 检查指定形式化目标和公理，不直接认证自然语言原意或历史新颖性。 |
 | [Mathlib](https://github.com/leanprover-community/mathlib4) | **可复用的形式化数学知识库**。社区数学库，决定大量 Lean 任务的现成知识覆盖。 | 库中定理依赖不等于论文思想的历史来源。 |
 | [Lean Blueprint](https://github.com/PatrickMassot/leanblueprint) | **作者标注的非形式化与形式化证明依赖图**。在大型 Lean 形式化项目中使用的证明规划和依赖展示工具。 | 图由作者使用标记组织，不能当作自动恢复任意论文证明结构。 |
 
