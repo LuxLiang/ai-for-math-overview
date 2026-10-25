@@ -1,0 +1,136 @@
+{
+  "purpose": "Exact finite mathematical diagnostics; no model or historical novelty evaluation.",
+  "method": "Python standard library; integer arithmetic and exhaustive enumeration.",
+  "signed_matrices": [
+    {
+      "n": 1,
+      "dimension": 2,
+      "support_symmetry_and_square": "pass"
+    },
+    {
+      "n": 2,
+      "dimension": 4,
+      "support_symmetry_and_square": "pass"
+    },
+    {
+      "n": 3,
+      "dimension": 8,
+      "support_symmetry_and_square": "pass"
+    },
+    {
+      "n": 4,
+      "dimension": 16,
+      "support_symmetry_and_square": "pass"
+    },
+    {
+      "n": 5,
+      "dimension": 32,
+      "support_symmetry_and_square": "pass"
+    },
+    {
+      "n": 6,
+      "dimension": 64,
+      "support_symmetry_and_square": "pass"
+    }
+  ],
+  "threshold_subgraphs": [
+    {
+      "n": 1,
+      "vertices": 2,
+      "subsets_checked": 1,
+      "minimum_maximum_degree": 1
+    },
+    {
+      "n": 2,
+      "vertices": 3,
+      "subsets_checked": 4,
+      "minimum_maximum_degree": 2
+    },
+    {
+      "n": 3,
+      "vertices": 5,
+      "subsets_checked": 56,
+      "minimum_maximum_degree": 2
+    },
+    {
+      "n": 4,
+      "vertices": 9,
+      "subsets_checked": 11440,
+      "minimum_maximum_degree": 2
+    }
+  ],
+  "boolean_functions": [
+    {
+      "n": 0,
+      "truth_tables_checked": 2,
+      "nonconstant_reductions_checked": 0
+    },
+    {
+      "n": 1,
+      "truth_tables_checked": 4,
+      "nonconstant_reductions_checked": 2
+    },
+    {
+      "n": 2,
+      "truth_tables_checked": 16,
+      "nonconstant_reductions_checked": 14
+    },
+    {
+      "n": 3,
+      "truth_tables_checked": 256,
+      "nonconstant_reductions_checked": 254
+    }
+  ],
+  "half_threshold_counterexamples": [
+    {
+      "n": 1,
+      "vertices": 1,
+      "maximum_degree": 0
+    },
+    {
+      "n": 2,
+      "vertices": 2,
+      "maximum_degree": 0
+    },
+    {
+      "n": 3,
+      "vertices": 4,
+      "maximum_degree": 0
+    },
+    {
+      "n": 4,
+      "vertices": 8,
+      "maximum_degree": 0
+    },
+    {
+      "n": 5,
+      "vertices": 16,
+      "maximum_degree": 0
+    },
+    {
+      "n": 6,
+      "vertices": 32,
+      "maximum_degree": 0
+    }
+  ],
+  "negative_controls": {
+    "unsigned_cube_n2_square_off_diagonal": 2,
+    "unsigned_cube_n2_nonzero_kernel_vector": [
+      1,
+      0,
+      0,
+      -1
+    ],
+    "invalid_parameter_inference_numerical_countermodel": {
+      "n": 4,
+      "parameter_bound": 3,
+      "hypothetical_delta": 1,
+      "interpretation": "Only a countermodel to the two numerical premises; not a graph."
+    }
+  },
+  "limits": [
+    "No general theorem is established by finite enumeration.",
+    "No Lean compilation or independent expert review was performed.",
+    "No attribution pipeline, model accuracy or priority claim was evaluated."
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "huang-sensitivity",
+  "status": "manual-analysis-draft-not-expert-gold",
+  "checked_on": "2026-10-25",
+  "target": "Huang 1907.00847v2, Theorem 1.1 and its implication for Theorem 1.4",
+  "target_first_public_date": "2019-07-01",
+  "analysis_version_date": "2019-08-29",
+  "analysis": "docs/huang-sensitivity-case.md",
+  "sources": [
+    {
+      "id": "huang-v2",
+      "url": "https://arxiv.org/html/1907.00847v2",
+      "date": "2019-08-29",
+      "pdf_sha256": "9193d2dac7b3f6b6a84270884c6143913ae5a0ba9bf3db19273f9703db0ed6a2",
+      "reading_scope": "Full HTML and PDF; theorem and lemma numbering checked."
+    },
+    {
+      "id": "huang-v1",
+      "url": "https://arxiv.org/html/1907.00847v1",
+      "date": "2019-07-01",
+      "reading_scope": "Full HTML; proof and conclusion compared with v2."
+    },
+    {
+      "id": "cfgs-1988",
+      "url": "https://fanchung.ucsd.edu/ron/papers/88_06_induced_cube.pdf",
+      "pdf_sha256": "03db8b7f13f4e8039d62c7cec8bdccb0f6d97069415fb6b2cfe24dbb39b6ef8b",
+      "reading_scope": "Full PDF text; pp. 183–184 visually checked, especially Propositions 3.3 and 3.4."
+    },
+    {
+      "id": "gotsman-linial-1992",
+      "url": "https://doi.org/10.1016/0097-3165(92)90060-8",
+      "reading_scope": "Public abstract and institutional record only; full text unavailable. Huang's explicit attribution checked."
+    },
+    {
+      "id": "mathews-2019",
+      "url": "https://arxiv.org/html/1907.12357v1",
+      "date": "2019-07-29",
+      "reading_scope": "Introduction and Theorem 1.2; subsequent interpretation, not an antecedent to Huang v1."
+    },
+    {
+      "id": "mathlib-sensitivity",
+      "url": "https://github.com/leanprover-community/mathlib4/blob/a98628e16c11f5167f16124105ddce53efa9bfe5/Archive/Sensitivity.lean",
+      "blob_sha": "8cb1b0d4626bb353fdee96ed3ce3b72caade0aea",
+      "reading_scope": "Full source read; no local Lean compilation. Alternative dimension route inspected."
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "D1",
+      "question_zh": "给出递推矩阵与交错定理后，O2–O7 能否补齐？",
+      "source_locations": ["huang-v2: Lemmas 2.1–2.3; proof of Theorem 1.1"],
+      "expected_judgment_zh": "给出平方、迹、支撑、索引和最大坐标论证；验证成功不蕴含发现矩阵 routine。",
+      "axis": "conditional-completion-versus-discovery"
+    },
+    {
+      "id": "D2",
+      "question_zh": "前作对数下界是否已经覆盖目标的 √n 下界？",
+      "source_locations": ["cfgs-1988: Theorem 1.1; section 4"],
+      "expected_judgment_zh": "它是相关的较弱结果，不能仅凭同类对象认定覆盖较强结论。",
+      "axis": "result-strength"
+    },
+    {
+      "id": "D3",
+      "question_zh": "存在一个小最大度数的构造，是否覆盖所有诱导子图的度数下界？",
+      "source_locations": ["cfgs-1988: section 3", "huang-v2: Theorem 1.1"],
+      "expected_judgment_zh": "否；比较量词、上下界方向与参数范围。",
+      "axis": "quantifier-and-inequality-direction"
+    },
+    {
+      "id": "D4",
+      "question_zh": "Δ(G(𝓕))≤M 与 M≥√n 能否联合推出 Δ(G(𝓕))≥√n？",
+      "source_locations": ["cfgs-1988: Propositions 3.3 and 3.4, pp. 183–184"],
+      "expected_judgment_zh": "不能；n=4、M=3、Δ=1 是纯数值不蕴含见证，并非图反例。参数界不能冒充目标图的度数界。",
+      "axis": "same-formula-different-mathematical-role"
+    },
+    {
+      "id": "D5",
+      "question_zh": "将带符号矩阵换成普通 Q₂ 邻接矩阵，原谱论证是否照样闭合？",
+      "source_locations": ["huang-v2: Lemma 2.2; proof of Theorem 1.1"],
+      "expected_judgment_zh": "支撑仍正确，但平方恒等式和所需中间正特征值失效；普通 Q₂ 的谱为 2,0,0,-2。",
+      "axis": "witness-property-check"
+    },
+    {
+      "id": "D6",
+      "question_zh": "将顶点数改为恰好一半，目标下界是否仍成立？",
+      "source_locations": ["huang-v2: Theorem 1.1 and preceding paragraph"],
+      "expected_judgment_zh": "不成立；偶奇分部任取一侧，没有内部边。",
+      "axis": "assumption-necessity"
+    },
+    {
+      "id": "D7",
+      "question_zh": "形式化证明未调用交错定理，是否意味着它与原证明没有结构对应？",
+      "source_locations": ["mathlib-sensitivity: f_squared, f_matrix, g_injective, f_image_g, exists_eigenvalue, huang_degree_theorem"],
+      "expected_judgment_zh": "否；共同构造与目标可对齐，正特征子空间的维数交替代了交错步骤；不声称两条证明的所有细节相同。",
+      "axis": "alternative-proof-route"
+    },
+    {
+      "id": "D8",
+      "question_zh": "只给目标和旧工具、隐去矩阵时，补全失败能否证明其原创性？",
+      "source_locations": ["huang-v2: Lemma 2.2; proof of Theorem 1.1"],
+      "expected_judgment_zh": "不能；列出未解决的构造义务，保留未知。成功也可能来自已知公开证明或预训练记忆。",
+      "axis": "abstention-and-information-available"
+    },
+    {
+      "id": "D9",
+      "question_zh": "Mathews 的 2019-07-29 解释早于 Huang v2，是否因而是原始发现的前作？",
+      "source_locations": ["huang-v1: arXiv date 2019-07-01", "mathews-2019: introduction and date 2019-07-29", "huang-v2: arXiv date 2019-08-29"],
+      "expected_judgment_zh": "不能据此判为前作；它晚于首次公开的 Huang v1。记录后续解释与命题扩展，代数工具本身的更早历史另行核查。",
+      "axis": "first-public-disclosure-versus-version-date"
+    }
+  ],
+  "evaluation_status": {
+    "finite_mathematical_diagnostics": "scripts/check_huang_case.py",
+    "model_comparison": "not-run",
+    "independent_expert_review": "pending",
+    "historical_priority_of_matrix": "not-established"
+  }
+}

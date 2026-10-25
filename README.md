@@ -7,7 +7,7 @@
 
 理解 AI4Math 的能力边界、关键基础设施与开放问题，重点关注数学证明中的知识依赖和贡献归因：一个结果解决了什么问题，证明继承了什么，以及真正新增的数学内容在哪里。
 
-[任务定义](docs/task-specification.md) · [近邻重叠审查](docs/overlap-audit.md) · [任务覆盖](docs/task-coverage.md) · [研究缺口](docs/research-gaps.md)
+[证明案例](docs/huang-sensitivity-case.md) · [任务定义](docs/task-specification.md) · [近邻重叠审查](docs/overlap-audit.md) · [任务覆盖](docs/task-coverage.md) · [研究缺口](docs/research-gaps.md)
 
 [相关工作](docs/related-work.md) · [能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
 
@@ -68,10 +68,4 @@ flowchart LR
     E --> F[专家复核]
 ```
 
-这是拟研究的工作流。优先问题包括：关键依赖的核对、跨论文符号与假设对齐、routine 与新连接的区分，以及在有限审阅成本下识别真正需要专家判断的连接。[研究缺口与评测设计 →](docs/research-gaps.md)
-
-## Scope
-
-项目按技术代表性、社区使用、可复用性和研究关联度选择。同一路线合并历史版本；项目首页保留基础设施和代表性方法。OSVerify 与 math-lineage 作为贡献归因的专题案例单列，收录不意味着它们已形成领域共识。
-
-[收录标准与证据口径](docs/methodology.md) · [Contributing](CONTRIBUTING.md) · [License](LICENSE)
+首个[真实证明案例](docs/huang-sensitivity-case.md)已拆解 Huang 的敏感度定理，核对前作中的弱界、上界构造及参数界，并对照 Mathlib 的替代证明路线。案例将“给定构造后的验证”与“构造及用途的发现”分别记录，附有可重复的有限数学检查；独立专家复核与模型比较尚待开展。[研究缺口与评测设计 →](docs/research-gaps.md)
