@@ -62,6 +62,11 @@ flowchart LR
 
 这是拟研究的工作流。优先问题包括：证明步骤的稳定划分、跨论文符号与假设对齐、routine 判断，以及在有限审阅成本下识别真正需要专家判断的连接。[研究缺口与评测设计 →](docs/research-gaps.md)
 
+## Contributors
+
+- [LuxLiang](https://github.com/LuxLiang) — 项目发起与维护、研究方向和收录标准。
+- **Codex (OpenAI)** — AI 协作贡献者，参与文献整理、研究文档撰写与仓库工具维护。
+
 ## Scope
 
 项目按技术代表性、社区使用、可复用性和研究关联度选择。同一路线合并历史版本；项目首页保留基础设施和代表性方法。OSVerify 与 math-lineage 作为贡献归因的专题案例单列，收录不意味着它们已形成领域共识。
