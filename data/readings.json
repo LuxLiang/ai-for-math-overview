@@ -3,100 +3,37 @@
     "id": "2306.15626",
     "title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models",
     "date": "2023-06-27",
-    "category": "formal",
+    "category": "proving",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2306.15626",
     "repository": "lean-dojo/LeanDojo",
     "note_zh": "理解证明环境、前提检索和 ReProver 的关系。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2404.12534",
-    "title": "Lean Copilot: Large Language Models as Copilots for Theorem Proving in Lean",
-    "date": "2024-04-18",
-    "category": "formal",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2404.12534",
-    "repository": "lean-dojo/LeanCopilot",
-    "note_zh": "了解编辑器中的语言模型证明辅助。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2410.16429",
-    "title": "Pantograph: A Machine-to-Machine Interaction Interface for Advanced Theorem Proving, High Level Reasoning, and Data Extraction in Lean 4",
-    "date": "2024-10-21",
-    "category": "formal",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2410.16429",
-    "repository": "stanford-centaur/PyPantograph",
-    "note_zh": "了解可交互证明环境如何支持自动搜索。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2408.08152",
-    "title": "DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search",
-    "date": "2024-08-15",
-    "category": "formal",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2408.08152",
-    "repository": "deepseek-ai/DeepSeek-Prover-V1.5",
-    "note_zh": "研究强化学习、证明反馈与树搜索。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2504.21801",
     "title": "DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition",
     "date": "2025-04-30",
-    "category": "formal",
+    "category": "proving",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2504.21801",
     "repository": "deepseek-ai/DeepSeek-Prover-V2",
     "note_zh": "研究复杂定理的子目标分解与强化学习。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2502.07640",
-    "title": "Goedel-Prover: A Frontier Model for Open-Source Automated Theorem Proving",
-    "date": "2025-02-11",
-    "category": "formal",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2502.07640",
-    "repository": "Goedel-LM/Goedel-Prover",
-    "note_zh": "理解合成形式化数据的作用。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2508.03613",
     "title": "Goedel-Prover-V2: Scaling Formal Theorem Proving with Scaffolded Data Synthesis and Self-Correction",
     "date": "2025-08-05",
-    "category": "formal",
+    "category": "proving",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2508.03613",
     "repository": "Goedel-LM/Goedel-Prover-V2",
     "note_zh": "研究分阶段数据生成和编译器反馈自纠正。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2310.18457",
-    "title": "LLMSTEP: LLM proofstep suggestions in Lean",
-    "date": "2023-10-27",
-    "category": "formal",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2310.18457",
-    "repository": "wellecks/llmstep",
-    "note_zh": "了解轻量的 Lean tactic 建议接口。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2504.11354",
-    "title": "Kimina-Prover Preview: Towards Large Formal Reasoning Models with Reinforcement Learning",
-    "date": "2025-04-15",
-    "category": "formal",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2504.11354",
-    "repository": "MoonshotAI/Kimina-Prover-Preview",
-    "note_zh": "研究大规模形式化推理模型的训练。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2402.03300",
@@ -105,9 +42,10 @@
     "category": "reasoning",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2402.03300",
-    "repository": "deepseek-ai/DeepSeek-Math",
+    "repository": null,
     "note_zh": "了解数学预训练与 GRPO 的起点。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2501.12948",
@@ -116,9 +54,10 @@
     "category": "reasoning",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2501.12948",
-    "repository": "deepseek-ai/DeepSeek-R1",
+    "repository": null,
     "note_zh": "了解推理强化学习与模型蒸馏。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2409.12122",
@@ -129,7 +68,8 @@
     "url": "https://arxiv.org/abs/2409.12122",
     "repository": "QwenLM/Qwen2.5-Math",
     "note_zh": "了解中英文数学模型与工具集成推理。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2309.17452",
@@ -138,9 +78,10 @@
     "category": "reasoning",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2309.17452",
-    "repository": "microsoft/ToRA",
+    "repository": null,
     "note_zh": "研究自然语言推理和代码执行如何交替。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2511.22570",
@@ -151,128 +92,68 @@
     "url": "https://arxiv.org/abs/2511.22570",
     "repository": "deepseek-ai/DeepSeek-Math-V2",
     "note_zh": "区分自然语言证明自验证与形式化内核验证。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2109.00110",
     "title": "MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics",
     "date": "2021-08-31",
-    "category": "benchmarks",
+    "category": "evaluation",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2109.00110",
-    "repository": "openai/miniF2F",
+    "repository": "facebookresearch/miniF2F",
     "note_zh": "了解跨形式化语言的竞赛证明基准。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2407.11214",
     "title": "PutnamBench: Evaluating Neural Theorem-Provers on the Putnam Mathematical Competition",
     "date": "2024-07-15",
-    "category": "benchmarks",
+    "category": "evaluation",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2407.11214",
     "repository": "trishullab/PutnamBench",
     "note_zh": "考察比基础竞赛题更复杂的形式化证明任务。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2302.12433",
-    "title": "ProofNet: Autoformalizing and Formally Proving Undergraduate-Level Mathematics",
-    "date": "2023-02-24",
-    "category": "benchmarks",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2302.12433",
-    "repository": "zhangir-azerbayev/ProofNet",
-    "note_zh": "研究自然语言到形式化陈述的对齐。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2103.03874",
-    "title": "Measuring Mathematical Problem Solving With the MATH Dataset",
-    "date": "2021-03-05",
-    "category": "benchmarks",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2103.03874",
-    "repository": "hendrycks/math",
-    "note_zh": "了解竞赛数学最终答案评测的基础数据。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2110.14168",
-    "title": "Training Verifiers to Solve Math Word Problems",
-    "date": "2021-10-27",
-    "category": "benchmarks",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2110.14168",
-    "repository": "openai/grade-school-math",
-    "note_zh": "了解应用题推理与验证器训练。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2402.14008",
-    "title": "OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems",
-    "date": "2024-02-21",
-    "category": "benchmarks",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2402.14008",
-    "repository": "OpenBMB/OlympiadBench",
-    "note_zh": "了解中英文多模态奥赛评测。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2411.04872",
     "title": "FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI",
     "date": "2024-11-07",
-    "category": "benchmarks",
+    "category": "evaluation",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2411.04872",
     "repository": null,
     "note_zh": "理解研究级数学问题评测；题库并非全部公开。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2603.02668",
     "title": "SorryDB: Can AI Provers Complete Real-World Lean Theorems?",
     "date": "2026-03-03",
-    "category": "benchmarks",
+    "category": "evaluation",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2603.02668",
     "repository": "SorryDB/SorryDB",
     "note_zh": "了解从真实数学项目提取动态证明任务的方法。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2604.06802",
-    "title": "Riemann-Bench: A Benchmark for Moonshot Mathematics",
-    "date": "2026-04-08",
-    "category": "benchmarks",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2604.06802",
-    "repository": null,
-    "note_zh": "补充研究级数学的私有基准视角。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "2503.11061",
-    "title": "Generative Modeling for Mathematical Discovery",
-    "date": "2025-03-14",
-    "category": "discovery",
-    "kind": "paper",
-    "url": "https://arxiv.org/abs/2503.11061",
-    "repository": null,
-    "note_zh": "了解为数学家设计的 FunSearch 实现与构造搜索。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "2502.03544",
     "title": "Gold-medalist Performance in Solving Olympiad Geometry with AlphaGeometry2",
     "date": "2025-02-05",
-    "category": "geometry",
+    "category": "discovery",
     "kind": "paper",
     "url": "https://arxiv.org/abs/2502.03544",
     "repository": "google-deepmind/alphageometry2",
     "note_zh": "研究几何符号引擎与辅助点生成如何配合。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "ai-intuition",
@@ -283,7 +164,8 @@
     "url": "https://www.nature.com/articles/s41586-021-04086-x",
     "repository": null,
     "note_zh": "机器学习寻找结构与模式，由数学家解释并形成数学结果。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "alphatensor",
@@ -294,7 +176,8 @@
     "url": "https://www.nature.com/articles/s41586-022-05172-4",
     "repository": "google-deepmind/alphatensor",
     "note_zh": "从张量分解和强化学习理解算法发现。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "funsearch",
@@ -305,51 +188,32 @@
     "url": "https://www.nature.com/articles/s41586-023-06924-6",
     "repository": "google-deepmind/funsearch",
     "note_zh": "从程序生成、演化与可计算评价器理解构造搜索。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "alphageometry",
     "title": "Solving olympiad geometry without human demonstrations",
     "date": "2024-01-17",
-    "category": "geometry",
+    "category": "discovery",
     "kind": "paper",
     "url": "https://www.nature.com/articles/s41586-023-06747-5",
-    "repository": "google-deepmind/alphageometry",
+    "repository": "google-deepmind/alphageometry2",
     "note_zh": "理解神经辅助点生成与符号几何推导。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "alphaproof",
     "title": "Olympiad-level formal mathematical reasoning with reinforcement learning",
     "date": "2025-11-12",
-    "category": "formal",
+    "category": "proving",
     "kind": "paper",
     "url": "https://www.nature.com/articles/s41586-025-09833-y",
     "repository": null,
     "note_zh": "AlphaProof 方法论文；论文公开不代表训练系统和权重完整开放。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "alphaproof-blog",
-    "title": "AI achieves silver-medal standard solving International Mathematical Olympiad problems",
-    "date": "2024-07-25",
-    "category": "formal",
-    "kind": "article",
-    "url": "https://deepmind.google/blog/ai-solves-imo-problems-at-silver-medal-level/",
-    "repository": null,
-    "note_zh": "了解 AlphaProof 与 AlphaGeometry 2 的任务分工及竞赛实验背景。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "alphaevolve",
-    "title": "AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms",
-    "date": "2025-05-14",
-    "category": "discovery",
-    "kind": "article",
-    "url": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/",
-    "repository": null,
-    "note_zh": "官方方法介绍：程序演化与自动评价；第三方 OpenEvolve 应独立标注。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "alphaevolve-2026",
@@ -360,39 +224,67 @@
     "url": "https://deepmind.google/blog/alphaevolve-impact/",
     "repository": null,
     "note_zh": "官方后续进展，帮助追踪数学构造与算法发现方向。",
-    "checked_on": "2026-10-25"
-  },
-  {
-    "id": "leanstral",
-    "title": "Leanstral: Open-Source foundation for trustworthy vibe-coding",
-    "date": "2026-03-16",
-    "category": "formal",
-    "kind": "article",
-    "url": "https://mistral.ai/news/leanstral/",
-    "repository": null,
-    "note_zh": "Lean 形式化推理模型的官方介绍；在线 API 的现状应另查更新日志。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
     "id": "leanstral-15",
     "title": "Leanstral 1.5: Proof Abundance for All",
     "date": "2026-07-02",
-    "category": "formal",
+    "category": "proving",
     "kind": "article",
     "url": "https://mistral.ai/news/leanstral-1-5/",
     "repository": null,
     "note_zh": "后续模型版本介绍；文章保留不表示实验 API 仍可用。",
-    "checked_on": "2026-10-25"
+    "checked_on": "2026-10-25",
+    "reading_scope": "metadata-and-primary-description"
   },
   {
-    "id": "claude-flt",
-    "title": "Formalizing Fermat's Last Theorem",
-    "date": "2026-09-04",
-    "category": "formal",
-    "kind": "article",
-    "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+    "id": "2610.18089",
+    "title": "One-Sided Verification Under Limited Expert Review",
+    "date": "2026-10-13",
+    "category": "verification",
+    "kind": "paper",
+    "url": "https://arxiv.org/html/2610.18089v1",
+    "repository": "OSVerify/OSVerify",
+    "note_zh": "重点读第 3 节：分层提出错误并单独验证；为步骤级研究提供方法参照。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "full-text-section-3-and-evaluation"
+  },
+  {
+    "id": "ssrn7607840",
+    "title": "Who Solved It? Aggregation Bias and the Empty-Library Paradox in OpenAI's 722-Manuscript Mathematics Release",
+    "date": "2026-10-13",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7607840",
     "repository": null,
-    "note_zh": "大型数学证明自动形式化案例；结合原始陈述、依赖与检查方式阅读。",
-    "checked_on": "2026-10-25"
+    "note_zh": "聚合偏差与文献依赖的宏观讨论；当前仅依据可访问摘要，不将其统计当作因果归因证据。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "abstract-only"
+  },
+  {
+    "id": "2607.16997",
+    "title": "PriorProof: A Point-in-Time Measure of Technique Novelty for Formal Proofs",
+    "date": "2026-07-18",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2607.16997",
+    "repository": null,
+    "note_zh": "以历史形式化依赖足迹构造证明路线信号；限定构念与专家判断的关系。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "abstract-only"
+  },
+  {
+    "id": "2608.14669",
+    "title": "Beyond Correctness: Toward Automated Novelty Verification with Lean 4",
+    "date": "2026-08-02",
+    "category": "attribution",
+    "kind": "paper",
+    "url": "https://arxiv.org/abs/2608.14669",
+    "repository": null,
+    "note_zh": "探索新颖性检查并讨论陈述忠实性、检索覆盖和复现障碍；初步研究。",
+    "checked_on": "2026-10-25",
+    "reading_scope": "abstract-only"
   }
 ]

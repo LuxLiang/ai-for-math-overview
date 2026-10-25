@@ -1,125 +1,69 @@
 # AI for Math Overview
 
-A curated overview of AI for mathematics: repositories, papers, articles, and reading paths. 中文导读，保留原始英文项目名与论文标题。
+[![Validate catalogue](https://github.com/LuxLiang/ai-for-math-overview/actions/workflows/catalogue.yml/badge.svg)](https://github.com/LuxLiang/ai-for-math-overview/actions/workflows/catalogue.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**首版核对日期：2026-10-25 · 39 个仓库 · 30 篇论文 · 6 篇官方文章**
+**Capabilities, infrastructure, and mathematical contribution attribution.**
 
-整理 AI 如何辅助数学解题、证明、形式化与发现。优先链接项目上游、作者论文和官方技术文章，每项附简短说明与核对日期。这是精选入门索引，覆盖经典路线与部分 2026 年进展，后续继续扩充。
+理解 AI4Math 的能力边界、关键基础设施与开放问题，重点关注数学证明中的知识依赖和贡献归因：一个结果解决了什么问题，证明继承了什么，以及真正新增的数学内容在哪里。
 
-## 导航
+[能力现状](docs/landscape.md) · [基础设施](docs/infrastructure.md) · [贡献归因](docs/contribution-attribution.md) · [研究缺口](docs/research-gaps.md) · [项目索引](docs/resources.md) · [论文](docs/readings.md)
 
-- [GitHub 仓库](#repositories)
-- [论文与技术文章](docs/readings.md)
-- [按研究目标选择阅读路线](docs/reading-paths.md)
-- [收录标准与评测注意事项](docs/methodology.md)
-- [贡献与维护](CONTRIBUTING.md)
-- [结构化仓库数据](data/repositories.json) · [阅读数据](data/readings.json) · [精简 BibTeX](references.bib)
+## Where AI4Math stands
 
-## 研究版图
-
-| 方向 | 典型任务 | 主要反馈 |
+| 研究环节 | 已有能力与代表性工作 | 仍需解决的问题 |
 | --- | --- | --- |
-| 自然语言推理 | 解题、生成证明草稿、调用代码工具 | 最终答案比较、执行结果、自然语言审阅 |
-| 形式化证明 | 在 Lean 等系统中补全可检查的证明 | 证明助手与内核检查 |
-| 自动形式化 | 将数学陈述与推导转为形式化代码 | 编译反馈，以及人对原意的核对 |
-| 几何推理 | 图形关系推导与辅助点搜索 | 符号几何推理器 |
-| 数学发现 | 寻找构造、猜想、算法和反例 | 可计算目标、实验与后续数学证明 |
+| 解题与证明生成 | [DeepSeekMath V2](https://github.com/deepseek-ai/DeepSeek-Math-V2)、[Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math)：数学推理、自验证与工具使用 | 研究问题中的长程依赖、可靠验证，以及输出与已有文献的关系 |
+| 形式化证明 | [Lean / Mathlib](https://github.com/leanprover-community/mathlib4)、[DeepSeek-Prover V2](https://github.com/deepseek-ai/DeepSeek-Prover-V2)、[Goedel-Prover V2](https://github.com/Goedel-LM/Goedel-Prover-V2)：在给定形式化陈述下生成可检查证明 | 自然语言陈述的忠实性、数学库覆盖，以及形式化依赖与思想来源之间的映射 |
+| 数学与算法发现 | [AlphaTensor](https://github.com/google-deepmind/alphatensor)、[FunSearch](https://github.com/google-deepmind/funsearch)、[AlphaEvolve](https://deepmind.google/blog/alphaevolve-impact/)：在可评价的搜索空间发现算法与构造 | 缺少自动评价器的开放问题，以及发现结果的贡献判定 |
+| 非形式化证明审阅 | [OSVerify](https://arxiv.org/html/2610.18089v1#S3)：围绕具体疑点组织错误搜索与验证 | 审阅覆盖率、漏检、领域迁移与有限专家时间的分配 |
+| 数学内容溯源 | [math-lineage](https://github.com/jnshi/math-lineage)：将具体结果、技巧与先前文献建立对应 | 从局部对应扩展到整条证明的依赖与新颖性分析 |
 
-形式化证明验证的是所编码的陈述；仍需检查该陈述是否忠实表达原题、依赖哪些公理以及是否存在占位证明。最终答案正确与整段论证正确也应分别评估。详见[方法说明](docs/methodology.md)。
+这些环节已有可复用的工具与研究实例；它们提供的证据不同。证明通过检查，支持的是陈述正确性；新颖性还需要对照既有文献。详细实验条件与适用范围见[能力现状](docs/landscape.md)。
 
-## 从哪里开始
+## Infrastructure map
 
-1. **了解领域**：先读下方分类，再沿[阅读路线](docs/reading-paths.md)选一条主线。
-2. **实现 Lean 证明代理**：Lean / Mathlib → LeanDojo 或 Pantograph → ReProver / DeepSeek-Prover → miniF2F / PutnamBench → SorryDB。
-3. **研究数学模型训练**：DeepSeekMath → Qwen2.5-Math / ToRA → DeepSeek-R1 → DeepSeekMath V2。
-4. **研究数学发现**：AI 引导数学直觉 → AlphaTensor → FunSearch → AlphaEvolve；用 OpenEvolve 研究第三方实现。
-
-<a id="repositories"></a>
-
-## GitHub 仓库
-
-开放内容是阅读入口提示，不保证完整训练流程可复现。模型、数据和代码可能采用不同许可；以各组件上游许可为准。第三方实现单独标注，已归档仓库会保留历史价值并注明状态。
-
-### 证明基础设施
-
-| 项目 | 用途 | 开放内容 / 角色 |
+| 层次 | 代表性基础设施 | 对贡献归因的作用 |
 | --- | --- | --- |
-| [Lean 4](https://github.com/leanprover/lean4) | 交互式证明助手与内核，是许多 AI 形式化证明系统的验证基础。 | 基础设施 |
-| [Mathlib](https://github.com/leanprover-community/mathlib4) | Lean 4 的社区数学库，支持定义、定理与证明复用。 | 数学库 |
-| [Lean REPL](https://github.com/leanprover-community/repl) | 让外部程序与 Lean 证明环境交互的基础工具。 | 代码 |
+| 文献获取与标识 | [arXiv](https://info.arxiv.org/help/api/index.html)、[Crossref](https://www.crossref.org/documentation/retrieve-metadata/rest-api/)、[OpenAlex](https://help.openalex.org/) | 找到候选前作，固定文献版本与时间关系 |
+| 文档结构化 | [GROBID](https://github.com/grobidOrg/grobid)、[MinerU](https://github.com/opendatalab/MinerU) | 提取正文、公式、定理编号与参考文献，保留原文位置 |
+| 数学知识与证明接口 | [Mathlib](https://github.com/leanprover-community/mathlib4)、[LeanDojo](https://github.com/lean-dojo/LeanDojo)、[Pantograph](https://github.com/stanford-centaur/PyPantograph) | 检索和验证形式化数学中的局部依赖 |
+| 审阅与内容对应 | [OSVerify](https://github.com/OSVerify/OSVerify)、[math-lineage](https://github.com/jnshi/math-lineage) | 检查局部疑点，积累当前证明与先前工作的对应证据 |
+| 评测与研究语料 | [miniF2F](https://github.com/facebookresearch/miniF2F)、[PutnamBench](https://github.com/trishullab/PutnamBench)、[SorryDB](https://github.com/SorryDB/SorryDB)、[OpenAI Math](https://github.com/openai/math) | 分别提供竞赛证明、真实项目任务与研究手稿；用途不混用 |
 
-### 形式化证明与自动形式化
+工具的输入输出、可复用部分和接入后的空缺见[基础设施分析](docs/infrastructure.md)。
 
-| 项目 | 用途 | 开放内容 / 角色 |
-| --- | --- | --- |
-| [LeanDojo](https://github.com/lean-dojo/LeanDojo) | 提取 Lean 证明数据、交互环境与检索增强证明研究。 | 代码/数据 |
-| [LeanDojo v2](https://github.com/lean-dojo/LeanDojo-v2) | 用于训练、评估和部署 Lean 4 AI 证明器的后续框架。 | 代码 |
-| [ReProver](https://github.com/lean-dojo/ReProver) | 检索前提并生成证明步骤的 LeanDojo 配套证明器。 | 代码/模型 |
-| [Lean Copilot](https://github.com/lean-dojo/LeanCopilot) | 在 Lean 编辑环境中提供证明步骤建议与证明搜索。 | 代码/模型 |
-| [Pantograph](https://github.com/stanford-centaur/PyPantograph) | Python 与 Lean 4 证明状态交互，适合构建搜索环境。 | 代码 |
-| [DeepSeek-Prover V2](https://github.com/deepseek-ai/DeepSeek-Prover-V2) | 通过子目标分解与强化学习提升 Lean 形式化证明。 | 代码/模型 |
-| [DeepSeek-Prover V1.5](https://github.com/deepseek-ai/DeepSeek-Prover-V1.5) | 结合强化学习与树搜索的早期开放证明器。 | 代码/模型 |
-| [Goedel-Prover V2](https://github.com/Goedel-LM/Goedel-Prover-V2) | 研究脚手架式合成数据与自纠正的形式化证明训练。 | 代码/模型/数据 |
-| [Goedel-Prover](https://github.com/Goedel-LM/Goedel-Prover) | 通过合成形式化数据训练开放 Lean 证明器。 | 代码/模型/数据 |
-| [llmstep](https://github.com/wellecks/llmstep) | 在 Lean 中调用语言模型建议下一步 tactic。 | 代码 |
-| [Kimina Lean Server](https://github.com/project-numina/kimina-lean-server) | 提供 Lean 代码批量验证服务与客户端 SDK。 | 代码 |
-| [Kimina-Prover Preview](https://github.com/MoonshotAI/Kimina-Prover-Preview) | 研究大规模形式化推理与强化学习的开放预览。 | 代码/模型 |
-| [UlamAI](https://github.com/ulamai/ulamai) | 开放 Lean 证明与自动形式化工作流，包含自然语言证明入口。 | 代码 |
-| [MerLean](https://github.com/MerLeanProver/MerLean) | 基于规划图的 Lean 4 与 Mathlib 自动证明代理。 | 代码 |
+## Mathematical contribution attribution
 
-### 几何推理
+核心分析单位是**一个数学主张及其推导依赖**。整篇论文的引用数量或模型的自述，都不足以回答哪些部分是新贡献。
 
-| 项目 | 用途 | 开放内容 / 角色 |
-| --- | --- | --- |
-| [AlphaGeometry](https://github.com/google-deepmind/alphageometry) | 神经生成与符号几何推导结合的竞赛几何系统。 | 代码/模型 |
-| [AlphaGeometry 2](https://github.com/google-deepmind/alphageometry2) | 公开 DDAR 符号推理核心与示例；该仓库不包含完整神经生成系统。 | 部分代码：DDAR |
+| 问题 | 需要的证据 |
+| --- | --- |
+| **结果新在哪里？** | 与前作逐项比较对象、假设、结论、参数范围；区分新结果、推广、反例与重述 |
+| **证明新在哪里？** | 对齐关键引理、构造和证明路线，区分直接使用、改造与新的连接 |
+| **关键跳跃在哪里？** | 找出前提到结论之间必须新增的论证，检查前作能否直接补齐 |
+| **哪些属于 routine？** | 给定领域与前提，说明能用哪些标准结果推得；由领域专家核对 |
+| **贡献由谁完成？** | 记录人、模型、工具与文献的实际作用；仅有文本相似性不能确定生成过程 |
 
-### 自然语言数学推理与工具使用
+必须区分**论证缺口**和**创新性连接**：缺少证明的跳步首先是待验证义务，不能直接记作贡献。检索不到前作的步骤也应保留为未决。[完整分析框架 →](docs/contribution-attribution.md)
 
-| 项目 | 用途 | 开放内容 / 角色 |
-| --- | --- | --- |
-| [DeepSeekMath](https://github.com/deepseek-ai/DeepSeek-Math) | 数学预训练、指令微调与 GRPO 的早期开放研究。 | 代码/模型 |
-| [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) | 通用推理模型，在数学任务中研究强化学习与蒸馏。 | 模型/报告 |
-| [Qwen2.5-Math](https://github.com/QwenLM/Qwen2.5-Math) | 支持中英文思维链与工具集成推理的数学模型系列。 | 代码/模型 |
-| [ToRA](https://github.com/microsoft/ToRA) | 交替使用自然语言推理与程序工具解决数学问题。 | 代码/模型 |
-| [Numina AIMO](https://github.com/project-numina/aimo-progress-prize) | 数学竞赛解题的训练、推理与工具使用材料。 | 代码 |
-| [NeMo-Skills](https://github.com/NVIDIA-NeMo/Skills) | 包含数学推理数据生成、训练与评测工作流。 | 代码/配方 |
-| [DeepSeekMath V2](https://github.com/deepseek-ai/DeepSeek-Math-V2) | 研究自然语言数学证明的生成与自验证。 | 模型/报告 |
+## Research direction
 
-### 数学发现与算法搜索
+在本索引覆盖的代表性系统中，证明生成、错误检查和文献检索已经各自形成工具链。下一步值得检验的是：能否将它们组织成**可复核的证明依赖与贡献证据**。
 
-| 项目 | 用途 | 开放内容 / 角色 |
-| --- | --- | --- |
-| [FunSearch](https://github.com/google-deepmind/funsearch) | 语言模型生成程序，并用可计算目标筛选数学构造。 | 代码/示例 |
-| [AlphaTensor](https://github.com/google-deepmind/alphatensor) | 以张量分解搜索矩阵乘法算法的官方研究材料。 | 算法/验证与基准代码 |
-| [OpenEvolve](https://github.com/algorithmicsuperintelligence/openevolve) | 受 AlphaEvolve 启发的第三方程序演化实现。 | 代码；第三方实现 |
-| [OpenAI Math](https://github.com/openai/math) | 研究手稿与相关验证材料的发布入口，逐项查看验证状态。 | 研究材料 |
-
-### 数据集、基准与评测工具
-
-| 项目 | 用途 | 开放内容 / 角色 |
-| --- | --- | --- |
-| [miniF2F](https://github.com/openai/miniF2F) | 跨形式化语言的竞赛数学证明基准。 | 基准/数据；已归档 |
-| [PutnamBench](https://github.com/trishullab/PutnamBench) | Putnam 竞赛题目的形式化证明基准。 | 基准/数据 |
-| [ProofNet](https://github.com/zhangir-azerbayev/ProofNet) | 自然语言与形式化陈述配对，用于自动形式化。 | 基准/数据 |
-| [MATH](https://github.com/hendrycks/math) | 自然语言竞赛数学题与解答，用于非形式化解题评测。 | 基准/数据 |
-| [GSM8K](https://github.com/openai/grade-school-math) | 小学应用题多步推理基准，作为基础能力对照。 | 基准/数据；已归档 |
-| [OlympiadBench](https://github.com/OpenBMB/OlympiadBench) | 包含奥赛数学与物理的中英文多模态基准。 | 基准/数据 |
-| [Math-Verify](https://github.com/huggingface/Math-Verify) | 抽取和比较模型最终数学答案的工具。 | 评测工具 |
-| [miniF2F (Meta)](https://github.com/facebookresearch/miniF2F) | Meta 维护的 miniF2F 相关版本；使用时与 OpenAI 原仓库区分并固定提交。 | 基准/数据 |
-| [SorryDB](https://github.com/SorryDB/SorryDB) | 从真实 Lean 项目收集未完成证明任务，配套代理和验证工具。 | 基准/数据/代码 |
-
-## 持续维护
-
-条目来源与说明保存在 `data/`，展示文档由脚本生成，减少重复编辑：
-
-```bash
-python3 scripts/build.py          # 校验数据并生成文档
-python3 scripts/build.py --check  # 校验数据与生成文件是否一致
+```mermaid
+flowchart LR
+    A[论文与版本] --> B[主张和证明依赖]
+    B --> C[候选前作检索]
+    C --> D[局部对应与论证检查]
+    D --> E[贡献判断与未决项]
+    E --> F[专家复核]
 ```
 
-只使用 Python 标准库。GitHub Actions 在推送和 PR 时运行离线一致性检查；不自动抓取、改写条目或发布未经审核的资源。增加内容请参考 [CONTRIBUTING.md](CONTRIBUTING.md)。
+这是拟研究的工作流。优先问题包括：证明步骤的稳定划分、跨论文符号与假设对齐、routine 判断，以及在有限审阅成本下识别真正需要专家判断的连接。[研究缺口与评测设计 →](docs/research-gaps.md)
 
-## 许可
+## Scope
 
-本仓库原创说明和维护脚本采用 [MIT License](LICENSE)。链接指向的论文、代码、模型和数据各自遵循上游许可，本仓库不重新分发这些资源。
+项目按技术代表性、社区使用、可复用性和研究关联度选择。同一路线合并历史版本；项目首页保留基础设施和代表性方法。OSVerify 与 math-lineage 作为贡献归因的专题案例单列，收录不意味着它们已形成领域共识。
+
+[收录标准与证据口径](docs/methodology.md) · [Contributing](CONTRIBUTING.md) · [License](LICENSE)
