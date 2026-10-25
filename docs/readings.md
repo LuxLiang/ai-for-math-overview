@@ -56,7 +56,7 @@
 | 2026-08-02 | [Beyond Correctness: Toward Automated Novelty Verification with Lean 4](https://arxiv.org/abs/2608.14669) | 探索新颖性检查并讨论陈述忠实性、检索覆盖和复现障碍；初步研究。 **仅摘要。** |
 | 2026-10-13 | [Who Solved It? Aggregation Bias and the Empty-Library Paradox in OpenAI's 722-Manuscript Mathematics Release](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7607840) | 聚合偏差与文献依赖的宏观讨论；当前仅依据可访问摘要，不将其统计当作因果归因证据。 **仅摘要。** |
 
-## Evaluation and research corpora
+## 评测基准与研究材料
 
 | 日期 | 文献 | 研究关联 |
 | --- | --- | --- |

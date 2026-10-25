@@ -15,7 +15,7 @@ CATEGORIES = {
     'discovery': 'Mathematical and algorithmic discovery',
     'verification': 'Informal verification',
     'attribution': 'Contribution attribution',
-    'evaluation': 'Evaluation and research corpora',
+    'evaluation': '评测基准与研究材料',
 }
 
 

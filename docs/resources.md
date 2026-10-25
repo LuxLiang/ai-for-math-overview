@@ -55,7 +55,7 @@
 | --- | --- | --- |
 | [math-lineage](https://github.com/jnshi/math-lineage)（专题案例） | **数学技巧与前人工作的对应**。直接分析具体数学内容的历史来源与引用状态。 | 有限案例，报告由代理生成且通常未经人工核验。 |
 
-## Evaluation and research corpora
+## 评测基准与研究材料
 
 | 项目 | 角色与收录理由 | 能力边界 |
 | --- | --- | --- |

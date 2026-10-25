@@ -29,7 +29,7 @@
 | 文档结构化 | [GROBID](https://github.com/grobidOrg/grobid)、[MinerU](https://github.com/opendatalab/MinerU) | 提取正文、公式、定理编号与参考文献，保留原文位置 |
 | 数学知识与证明接口 | [Mathlib](https://github.com/leanprover-community/mathlib4)、[LeanDojo](https://github.com/lean-dojo/LeanDojo)、[Pantograph](https://github.com/stanford-centaur/PyPantograph) | 检索和验证形式化数学中的局部依赖 |
 | 审阅与内容对应 | [OSVerify](https://github.com/OSVerify/OSVerify)、[math-lineage](https://github.com/jnshi/math-lineage) | 检查局部疑点，积累当前证明与先前工作的对应证据 |
-| 评测与研究语料 | [miniF2F](https://github.com/facebookresearch/miniF2F)、[PutnamBench](https://github.com/trishullab/PutnamBench)、[SorryDB](https://github.com/SorryDB/SorryDB)、[OpenAI Math](https://github.com/openai/math) | 分别提供竞赛证明、真实项目任务与研究手稿；用途不混用 |
+| 评测基准与研究材料 | [miniF2F](https://github.com/facebookresearch/miniF2F)、[PutnamBench](https://github.com/trishullab/PutnamBench)、[SorryDB](https://github.com/SorryDB/SorryDB)、[OpenAI Math](https://github.com/openai/math) | 分别提供竞赛证明、真实项目任务与研究手稿；用途不混用 |
 
 工具的输入输出、可复用部分和接入后的空缺见[基础设施分析](docs/infrastructure.md)。
 
